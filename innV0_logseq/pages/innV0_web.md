@@ -31,8 +31,6 @@
 			  image_alt:: Value Proposition
 		- Text Column
 		  column:: content
-			- ### Value Proposition
-			  element_type:: title
 			- A step-by-step innovation framework: We provide a repeatable, proven sequence of phases so you never wonder what to tackle next
 			  element_type:: paragraph
 	- ## Our Phases
@@ -66,8 +64,6 @@
 			  image_alt:: Solution Structure
 		- Text Column
 		  column:: content
-			- ### Solution Structure
-			  element_type:: title
 			- Modular Work Units: Self-contained building blocks you can plug into existing workflows or run as standalone sprints
 			  element_type:: list_item
 			- Inputs: Key documents, concepts, and tools such as strategic plans, customer personas, and ideation templates
@@ -134,8 +130,6 @@
 			  image_alt:: Integration with Methodologies
 		- Text Column
 		  column:: content
-			- ### Integration with Best-Practice Methodologies
-			  element_type:: title
 			- 24 Steps of Disciplined Entrepreneurship: End-to-end framework for building a scalable venture from idea to launch
 			  element_type:: list_item
 			- Lean Startup: Build–Measure–Learn cycles emphasizing quick experiments and data-driven decisions
@@ -149,8 +143,6 @@
 	  section_type:: content_block
 	  layout:: text_only
 	  section_title:: Key Benefits
-		- ### Key Benefits
-		  element_type:: title
 		- Clarity: Defined path eradicates confusion and aligns teams
 		  element_type:: list_item
 		- Speed: Jump from zero to prototype in weeks, not months
@@ -183,8 +175,6 @@
 			  image_alt:: Case Example
 		- Text Column
 		  column:: content
-			- ### Case Example
-			  element_type:: title
 			- #### Mid-Sized Event Company (40 Employees)
 			  element_type:: title
 			- Profile: Overwhelmed with manual processes yet eager to innovate without derailing operations

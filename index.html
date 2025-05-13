@@ -1,239 +1,284 @@
-<![CDATA[<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>AI Application Company</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>innV0</title>
   <script src="https://cdn.tailwindcss.com"></script>
-  <style>@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap');</style>
-</head>
-<body class="bg-gray-100 text-gray-900 font-sans antialiased">
-  <header class="bg-white py-4 px-6 shadow-sm relative">
-    <h1 class="text-2xl font-bold tracking-tight">innV0</h1>
-    <a class="absolute left-1/2 transform -translate-x-1/2" href="./innV0_logseq/published/#/page/innv0_labs" target="_blank">Lab</a>
-  </header>
+  <style>
+    
+    @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap');
+    body { font-family: 'Inter', sans-serif; }
+    :root {
+      --background: 0 0% 100%;
+      --foreground: 240 10% 3.9%;
+      --card: 0 0% 100%;
+      --card-foreground: 240 10% 3.9%;
+      --popover: 0 0% 100%;
+      --popover-foreground: 240 10% 3.9%;
+      --primary: 240 5.9% 10%;
+      --primary-foreground: 0 0% 98%;
+      --secondary: 240 4.8% 95.9%;
+      --secondary-foreground: 240 5.9% 10%;
+      --muted: 240 4.8% 90%; /* Updated Muted for light mode */
+      --muted-foreground: 240 3.8% 46.1%; /* Updated Muted Foreground for light mode */
+      --accent: 240 5.9% 10%;
+      --accent-foreground: 0 0% 98%;
+      --destructive: 0 84.2% 60.2%;
+      --destructive-foreground: 0 0% 98%;
+      --border: 240 5.9% 90%;
+      --input: 240 5.9% 90%;
+      --ring: 240 5.9% 10%;
+      --radius: 0.5rem;
+    }
+    .dark {
+      --background: 240 10% 3.9%;
+      --foreground: 0 0% 98%;
+      --card: 240 10% 3.9%;
+      --card-foreground: 0 0% 98%;
+      --popover: 240 10% 3.9%;
+      --popover-foreground: 0 0% 98%;
+      --primary: 0 0% 98%;
+      --primary-foreground: 240 5.9% 10%;
+      --secondary: 240 3.7% 15.9%;
+      --secondary-foreground: 0 0% 98%;
+      --muted: 240 3.7% 15.9%; /* Updated Muted for dark mode */
+      --muted-foreground: 240 5% 64.9%; /* Updated Muted Foreground for dark mode */
+      --accent: 0 0% 98%;
+      --accent-foreground: 240 5.9% 10%;
+      --destructive: 0 62.8% 30.6%;
+      --destructive-foreground: 0 0% 98%;
+      --border: 240 3.7% 15.9%;
+      --input: 240 3.7% 15.9%;
+      --ring: 0 0% 98%;
+    }
+    * { border-color: hsl(var(--border)); }
+    body { background-color: hsl(var(--background)); color: hsl(var(--foreground)); margin: 0; padding: 0; }
+    .highlight-first-sentence strong:first-child { font-weight: bold; }
+    header.sticky {
+        background-color: hsl(var(--background) / 0.8); /* Semi-transparent background */
+        backdrop-filter: blur(10px);
+        -webkit-backdrop-filter: blur(10px);
+    }
+    header.sticky .container > div:first-child { 
+        color: hsl(var(--foreground));
+    }
+    .dark header.sticky .container > div:first-child {
+        color: hsl(var(--foreground));
+    }
+    header.sticky nav a {
+        color: hsl(var(--muted-foreground)); 
+    }
+    header.sticky nav a:hover {
+        color: hsl(var(--primary)); 
+    }
+    .dark header.sticky nav a {
+        color: hsl(var(--muted-foreground));
+    }
+    .dark header.sticky nav a:hover {
+        color: hsl(var(--primary));
+    }
 
-  <div class="container mx-auto px-4 py-8 bg-white shadow-lg rounded-lg my-8 max-w-screen-xl">
-    <section id="hero" class="py-16 text-center rounded-lg mb-12">
-      <h2 class="text-4xl md:text-6xl font-extrabold mb-4 leading-tight font-sans text-gray-900">Innovation Kick-off Program</h2>
-      <p class="text-xl text-gray-700 mb-8 font-light">Structured methodology to guide you from zero to validated prototype</p>
-      <button class="bg-black text-white font-semibold py-3 px-8 rounded-md hover:bg-gray-800 transition duration-300"><a href="mailto:lucas@lucascervera.com" target="_blank">Contact</a></button>
-      <img src="img/main.webp" class="mx-auto">
-    </section>
-
-    <section id="value-proposition" class="py-12 border-b border-gray-200 mb-12">
-      <div class="flex flex-col md:flex-row items-center w-full">
-        <div class="w-full md:w-1/2 mb-6 md:mb-0 flex justify-center">
-          <img src="img/1.webp" alt="Value Proposition" class="rounded-md">
-        </div>
-        <div class="w-full md:w-1/2 md:pl-12">
-          <h3 class="text-3xl font-bold mb-6 text-gray-900">Value Proposition</h3>
-          <p class="text-lg text-gray-700 mb-8"><span class="font-semibold">A step-by-step innovation framework:</span> We provide a repeatable, proven sequence of phases so you never wonder what to tackle next</p>
-        </div>
-      </div>
-    </section>
-
-    <section id="phases" class="py-12 border-b border-gray-200 mb-12">
-      <h3 class="text-3xl font-bold mb-8 text-gray-900 text-center">Our Phases</h3>
-      <div class="relative flex flex-col items-start">
-        <!-- Vertical line -->
-        <div class="absolute left-5 top-0 h-full border-l-2 border-gray-300 md:hidden"></div>
-
-        <!-- Timeline Item 1 -->
-        <div class="mb-8 flex flex-col md:flex-row items-center w-full">
-          <div class="flex-grow mt-4 md:mt-0 md:ml-6 p-6 bg-gray-50 rounded-md shadow-sm border border-gray-200 w-full">
-            <h4 class="text-xl font-semibold text-gray-900 mb-2">Identification</h4>
-            <p class="text-gray-700">Systematically uncover unmet needs, market gaps, and strategic opportunities.</p>
-          </div>
-        </div>
-
-        <!-- Timeline Item 2 -->
-        <div class="mb-8 flex flex-col md:flex-row items-center w-full">
-          <div class="flex-grow mt-4 md:mt-0 md:ml-6 p-6 bg-gray-50 rounded-md shadow-sm border border-gray-200 w-full">
-            <h4 class="text-xl font-semibold text-gray-900 mb-2">Evaluation & Ranking</h4>
-            <p class="text-gray-700">Score ideas against real-world criteria (feasibility, impact, effort) to prioritize the most promising.</p>
-          </div>
-        </div>
-
-        <!-- Timeline Item 3 -->
-        <div class="mb-8 flex flex-col md:flex-row items-center w-full">
-          <div class="flex-grow mt-4 md:mt-0 md:ml-6 p-6 bg-gray-50 rounded-md shadow-sm border border-gray-200 w-full">
-            <h4 class="text-xl font-semibold text-gray-900 mb-2">Prototyping</h4>
-            <p class="text-gray-700">Build low-fidelity mock-ups that allow fast learning without heavy investment.</p>
-          </div>
-        </div>
-
-        <!-- Timeline Item 4 -->
-        <div class="mb-8 flex flex-col md:flex-row items-center w-full">
-          <div class="flex-grow mt-4 md:mt-0 md:ml-6 p-6 bg-gray-50 rounded-md shadow-sm border border-gray-200 w-full">
-            <h4 class="text-xl font-semibold text-gray-900 mb-2">Validation</h4>
-            <p class="text-gray-700">Test prototypes with actual users or stakeholders and collect actionable feedback.</p>
-          </div>
-        </div>
-
-        <!-- Timeline Item 5 -->
-        <div class="mb-8 flex flex-col md:flex-row items-center w-full">
-          <div class="flex-grow mt-4 md:mt-0 md:ml-6 p-6 bg-gray-50 rounded-md shadow-sm border border-gray-200 w-full">
-            <h4 class="text-xl font-semibold text-gray-900 mb-2">Deployment Plan</h4>
-            <p class="text-gray-700">Apply insights to enhance the solution, reduce risk, and prepare for deployment and scaling.</p>
-          </div>
-        </div>
-      </div>
-    </section>
+    /* Styles for code blocks (used if user guide content had them) */
+    .prose code {
+      color: hsl(var(--foreground)); 
+      background-color: hsl(var(--muted)); 
+      padding: 0.1em 0.3em;
+      border-radius: 0.25em;
+    }
+    .prose pre {
+      background-color: hsl(var(--muted));
+      color: hsl(var(--foreground));
+      padding: 1em;
+      border-radius: 0.5em;
+      overflow-x: auto;
+    }
+    .prose pre code {
+      background-color: transparent; 
+      padding: 0;
+    }
+    .dark .prose code {
+       color: hsl(var(--foreground));
+       background-color: hsl(var(--muted));
+    }
+    .dark .prose pre {
+      background-color: hsl(var(--muted));
+      color: hsl(var(--foreground));
+    }
+    .dark .prose pre code {
+      background-color: transparent;
+    }
+    .container {
+      max-width: 900px !important; /* Set max-width for all .container elements */
+    }
   
-    <section id="solution-structure" class="py-8 border-b border-gray-200 mb-12 items-center justify-items-center">
-      <div class="flex flex-col md:flex-row-reverse items-center w-full">
-        <div class="w-full md:w-1/2 mb-6 md:mb-0 flex justify-center">
-          <img src="img/2.webp" alt="Solution Structure" class="rounded-md">
-        </div>
-        <div class="w-full md:w-1/2 md:pr-12">
-          <h3 class="text-3xl font-bold mb-6 text-gray-900">Solution Structure</h3>
-          <ul class="list-disc list-inside text-lg text-gray-700 space-y-4">
-            <li><span class="font-semibold">Modular Work Units:</span> Self-contained building blocks you can plug into existing workflows or run as standalone sprints</li>
-            <li><span class="font-semibold">Inputs:</span> Key documents, concepts, and tools such as strategic plans, customer personas, and ideation templates</li>
-            <li><span class="font-semibold">Tasks:</span>
-              <ul class="list-circle list-inside ml-6 space-y-2">
-                <li><span class="font-semibold">Autonomous exercises:</span> Pre-recorded videos and guided worksheets for self-paced work</li>
-                <li><span class="font-semibold">Guided workshops:</span> Live or virtual sessions led by our innovation coaches to deepen learning and collaboration</li>
-              </ul>
-            </li>
-            <li><span class="font-semibold">Outputs:</span> Tangible deliverables like opportunity maps, idea scorecards, prototype schematics, and user-test summaries</li>
-          </ul>
-        </div>
-      </div>
-    </section>
-    
-    <section id="process-flow" class="py-8 border-b border-gray-200 mb-12">
-      <h3 class="text-3xl font-bold mb-8 text-gray-900 text-center">Our Process Flow</h3>
-      <div class="relative flex flex-col items-start">
-        <div class="absolute left-5 top-0 h-full border-l-2 border-gray-300 md:hidden"></div>
-        <p class="text-lg text-gray-700">We provide minimalist educational content to ensure clients grasp concepts before activities to maximize workshop efficiency with a shared vocabulary. This includes pre-session short clips (3–5 minutes) explaining core concepts, best practices, and case studies, as well as one-page briefs summarizing definitions, frameworks, and activity instructions.</p>
-
-        <!-- Timeline Item 1 -->
-        <div class="mb-8 flex flex-col md:flex-row items-center w-full">
-          <div class="flex-grow mt-4 md:mt-0 md:ml-6 p-4 bg-gray-50 rounded-md shadow-sm border border-gray-200 w-full">
-            <h4 class="text-xl font-semibold text-gray-900 mb-2">Self-Diagnostic (AI-Guided)</h4>
-            <p class="text-gray-700"><span class="font-semibold">Method:</span> Online chatbot questionnaire that assesses current innovation capabilities and mindset</p>
-            <p class="text-gray-700"><span class="font-semibold">Focus:</span> Measures risk tolerance, leadership buy-in, resource allocation, failure mindset, etc., and generates a personalized report highlighting strengths and gaps</p>
-          </div>
-        </div>
-
-        <!-- Timeline Item 2 - Image on the right -->
-        <div class="mb-8 flex flex-col md:flex-row-reverse items-center w-full">
-          <div class="flex-grow mt-4 md:mt-0 md:mr-6 p-4 bg-gray-50 rounded-md shadow-sm border border-gray-200 w-full">
-            <h4 class="text-xl font-semibold text-gray-900 mb-2">Initial Diagnosis</h4>
-            <p class="text-gray-700"><span class="font-semibold">Method:</span> Facilitated discovery session where stakeholders map out existing processes, pain points, and potential quick wins</p>
-            <p class="text-gray-700"><span class="font-semibold">Deliverable:</span> Current State & Opportunity Map – a visual chart showing high-impact areas to address first</p>
-          </div>
-        </div>
-        
-        <!-- Timeline Item 3 -->
-        <div class="mb-8 flex flex-col md:flex-row items-center w-full">
-          <div class="flex-grow mt-4 md:mt-0 md:ml-6 p-4 bg-gray-50 rounded-md shadow-sm border border-gray-200 w-full">
-            <h4 class="text-xl font-semibold text-gray-900 mb-2">Idea Generation & Evaluation</h4>
-            <p class="text-gray-700"><span class="font-semibold">Activities:</span> Guided brainstorming (e.g., SCAMPER, How-Might-We) followed by weighted scoring of ideas</p>
-            <p class="text-gray-700"><span class="font-semibold">Deliverable:</span> Ranked Idea Backlog with rationale and estimated benefits for each concept</p>
-          </div>
-        </div>
-
-        <!-- Timeline Item 4 -->
-        <div class="mb-8 flex flex-col md:flex-row-reverse items-center w-full">
-          <div class="flex-grow mt-4 md:mt-0 md:mr-6 p-4 bg-gray-50 rounded-md shadow-sm border border-gray-200 w-full">
-            <h4 class="text-xl font-semibold text-gray-900 mb-2">Prototype Conceptualization</h4>
-            <p class="text-gray-700"><span class="font-semibold">Method:</span> Rapid design sprint to sketch, decide, and storyboard key features</p>
-            <p class="text-gray-700"><span class="font-semibold">Deliverables:</span> Low-fidelity mock-ups and user journey sketches to illustrate core experiences</p>
-          </div>
-        </div>
-        <!-- Timeline Item 5 -->
-        <div class="mb-8 flex flex-col md:flex-row items-center w-full">
-          <div class="flex-grow mt-4 md:mt-0 md:ml-6 p-4 bg-gray-50 rounded-md shadow-sm border border-gray-200 w-full">
-            <h4 class="text-xl font-semibold text-gray-900 mb-2">Validation & Feedback</h4>
-            <p class="text-gray-700"><span class="font-semibold">Activities:</span> User interviews and usability tests to capture quantitative and qualitative data</p>
-            <p class="text-gray-700"><span class="font-semibold">Deliverable:</span> Feedback & Insights Report with actionable recommendations on improvements, pivots, or eliminations</p>
-          </div>
-        </div>
-
-        <!-- Timeline Item 6 -->
-        <div class="mb-0 flex flex-col md:flex-row-reverse items-center w-full">
-          <div class="flex-grow mt-4 md:mt-0 md:mr-6 p-4 bg-gray-50 rounded-md shadow-sm border border-gray-200 w-full">
-            <h4 class="text-xl font-semibold text-gray-900 mb-2">Iteration & Refinement</h4>
-            <p class="text-gray-700"><span class="font-semibold">Purpose:</span> Continuous improvement through lean cycles to refine prototypes, optimize features, and prepare for pilot launch</p>
-            <p class="text-gray-700"><span class="font-semibold">Deliverable:</span> Refined Prototype & Next Steps Plan outlining final mock-ups and a roadmap for scaling</p>
-          </div>
-        </div>  
-      </div>
-    </section>  
-    
-    <section id="integration" class="py-8 border-b border-gray-200 mb-12 items-center justify-items-center">
-      <div class="flex flex-col md:flex-row items-center w-full">
-        <div class="w-full md:w-1/2 mb-6 md:mb-0 flex justify-center">
-          <img src="img/3.webp" alt="Integration with Methodologies" class="rounded-md">
-        </div>
-        <div class="w-full md:w-1/2 md:pl-12">
-          <h3 class="text-3xl font-bold mb-6 text-gray-900">Integration with Best-Practice Methodologies</h3>
-          <ul class="list-disc list-inside text-lg text-gray-700 space-y-2">
-            <li><span class="font-semibold">24 Steps of Disciplined Entrepreneurship:</span> End-to-end framework for building a scalable venture from idea to launch</li>
-            <li><span class="font-semibold">Lean Startup:</span> Build–Measure–Learn cycles emphasizing quick experiments and data-driven decisions</li>
-            <li><span class="font-semibold">Running Lean:</span> Rapid hypothesis validation to align teams on assumptions, risks, and metrics</li>
-            <li><span class="font-semibold">Design Thinking:</span> Empathize → Define → Ideate → Prototype → Test for human-centered solutions</li>
-          </ul>
-        </div>
-      </div>
-    </section>  
-    
-    <section id="benefits" class="py-8 border-b border-gray-200 mb-12 items-center justify-items-center">
-      <div class="flex flex-col md:flex-row-reverse items-center w-full">
-        <div class="w-full md:w-1/2 md:pr-12">
-          <h3 class="text-3xl font-bold mb-6 text-gray-900">Key Benefits</h3>
-          <ul class="list-disc list-inside text-lg text-gray-700 space-y-2">
-            <li><span class="font-semibold">Clarity:</span> Defined path eradicates confusion and aligns teams</li>
-            <li><span class="font-semibold">Speed:</span> Jump from zero to prototype in weeks, not months</li>
-            <li><span class="font-semibold">Risk Mitigation:</span> Test assumptions early to reduce costly missteps</li>
-            <li><span class="font-semibold">Empowerment:</span> Builds client capability through guided autonomy and learning</li>
-          </ul>
-        </div>
-      </div>
-    </section>  
-
-    <section id="ideal-clients" class="py-8 border-b border-gray-200 mb-8">
-      <h3 class="text-3xl font-bold mb-6 text-gray-900 text-center">Clients</h3>
-      <ul class="list-disc list-inside text-lg text-gray-700 space-y-2">
-        <li><span class="font-semibold">Allocated innovation budget:</span> Companies that have dedicated funding for R&D or innovation initiatives</li>
-        <li><span class="font-semibold">Desire for structured innovation:</span> Organizations looking for a clear process to manage their innovation efforts effectively.</li>
-        <li><span class="font-semibold">Awareness of the need to innovate:</span> Teams that recognize stagnation risks and are motivated to adopt new approaches</li>
-        <li><span class="font-semibold">No established innovation process:</span> Organizations lacking internal frameworks, templates, or experience to systematically innovate</li>
-      </ul>
-    </section>
-
-    <section id="case-example" class="py-8">
-      <div class="flex flex-col md:flex-row items-center w-full">
-        <div class="w-full md:w-1/2 mb-6 md:mb-0 flex justify-center">
-          <img src="img/4.webp" alt="Case Example" class="rounded-md">
-        </div>
-        <div class="w-full md:w-1/2 md:pl-12">
-          <h3 class="text-3xl font-bold mb-6 text-gray-900">Case Example</h3>
-          <h4 class="text-2xl font-semibold text-gray-900 mb-4">Mid-Sized Event Company (40 Employees)</h4>
-          <ul class="list-disc list-inside text-lg text-gray-700 space-y-2">
-            <li><span class="font-semibold">Profile:</span> Overwhelmed with manual processes yet eager to innovate without derailing operations</li>
-            <li><span class="font-semibold">Application Steps:</span>
-              <ul class="list-circle list-inside ml-6 space-y-2">
-                <li>AI Self-Diagnostic Chatbot identifies lack of formal process and moderate risk aversion</li>
-                <li>Initial Diagnosis Workshop uncovers scheduling chaos and manual speaker coordination</li>
-                <li>Idea Workshop Generates concepts like speaker-management dashboard and email automation</li>
-                <li>Prototype Sprint Designs wireframes for dashboard and automated flow in one day</li>
-                <li>Validation Conducts usability tests with staff and a pilot cohort of attendees, gathering NPS and task-completion data</li>
-                <li>Iterations Refines UI elements and workflow logic; simplifies onboarding steps</li>
-              </ul>
-            </li>
-            <li><span class="font-semibold">Outcome:</span> Pilot tool saves 30 % of planning time and increases on-time communications by 80 %</li>
-            <li><span class="font-semibold">Insights:</span> Leadership will fund full rollout after seeing pilot ROI and show openness to external tech partnerships, preferring small-scale pilots before enterprise-wide changes</li>
-          </ul>
-        </div>
-      </div>
-    </section>
+  </style>
+  <script>
+    if (localStorage.theme === 'dark' || (!('theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+      document.documentElement.classList.add('dark')
+    } else {
+      document.documentElement.classList.remove('dark')
+    }
+    // Smooth scroll for anchor links
+    document.addEventListener('DOMContentLoaded', () => {
+      document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener('click', function (e) {
+          e.preventDefault();
+          const targetId = this.getAttribute('href');
+          const targetElement = document.querySelector(targetId);
+          if (targetElement) {
+            const headerElement = document.querySelector('header.sticky');
+            const headerOffset = headerElement ? headerElement.offsetHeight : 0;
+            const elementPosition = targetElement.getBoundingClientRect().top;
+            const offsetPosition = elementPosition + window.pageYOffset - headerOffset;
+            
+            window.scrollTo({
+              top: offsetPosition,
+              behavior: "smooth"
+            });
+          }
+        });
+      });
+    });
+  </script>
+</head>
+<body class="antialiased text-gray-800 dark:text-gray-200 bg-background">
+  <div id="page-container">
+    <header id="site-navigation-header" class="shadow-md sticky top-0 z-50 border-b border-border/50">
+                <div class="container mx-auto flex items-center justify-between p-4">
+                  <div class="text-xl font-bold text-foreground dark:text-foreground">innV0</div>
+                  <nav class="flex space-x-1 sm:space-x-2 md:space-x-4"><a href="./innV0_logseq/published/#/page/innv0_labs" class="px-3 py-2 rounded-md text-sm font-medium transition-colors">Lab</a></nav>
+                </div>
+              </header>
+<section id="hero" class="py-12 md:py-16 px-4 sm:px-6 lg:px-8 bg-gray-100 dark:bg-gray-800">
+        <div class="container mx-auto text-center">
+          <div class="mb-8"><img src="assets/main.webp" alt="null" class="w-full max-w-4xl mx-auto h-auto md:max-h-[600px] object-cover rounded-xl shadow-2xl" data-ai-hint="null"></div>
+          <h1 class="text-4xl sm:text-5xl lg:text-6xl font-extrabold mb-6 text-gray-900 dark:text-gray-100">Innovation Kick-off Program</h1>
+          <p class="text-lg sm:text-xl text-gray-700 dark:text-gray-300 mb-10 max-w-2xl mx-auto">Structured methodology to guide you from zero to validated prototype</p>
+          <a href="mailto:lucas@lucascervera.com" target="_self"   id="contact" class="inline-block bg-gray-900 text-white hover:bg-gray-700 dark:bg-gray-200 dark:text-black dark:hover:bg-gray-400 font-semibold px-6 py-3 rounded-md shadow-md transition-colors transform hover:scale-105 ">Contact</a>
+        </div></section>
+<section id="value-proposition" class="py-12 md:py-16 px-4 sm:px-6 lg:px-8 bg-background dark:bg-gray-900">
+                <div class="container mx-auto">
+                  <h2 class="text-3xl md:text-4xl font-bold text-center mb-10 md:mb-12 text-gray-900 dark:text-gray-100">Value Proposition</h2>
+                  <div class="grid gap-8 md:gap-12 items-center md:grid-cols-2">
+                            <div class="md:order-1"><div class="flex justify-center items-center"><img src="assets/1.webp" alt="Value Proposition" class="rounded-xl  object-contain max-h-[500px] lg:max-h-[600px] w-full" data-ai-hint="value-proposition"></div></div>
+                            <div class="md:order-2 text-gray-700 dark:text-gray-300"><p id="a-step-by-step-innovation-fram" class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 dark:text-gray-300 ">A step-by-step innovation framework: We provide a repeatable, proven sequence of phases so you never wonder what to tackle next</p></div>
+                          </div>
+                </div>
+              </section>
+<section id="phases" class="py-12 md:py-16 px-4 sm:px-6 lg:px-8 bg-background dark:bg-gray-900">
+                <div class="container mx-auto">
+                  <h2 class="text-3xl md:text-4xl font-bold text-center mb-10 md:mb-12 text-gray-900 dark:text-gray-100">Our Phases</h2>
+                  <ul class="list-none p-0 max-w-3xl mx-auto"><li class="mb-4 p-6 bg-card dark:bg-gray-800 border border-gray-200 dark:border-gray-700 rounded-xl transition-shadow hover:shadow-xl text-gray-700 dark:text-gray-300">
+                    Identification: Systematically uncover unmet needs, market gaps, and strategic opportunities.
+                  </li><li class="mb-4 p-6 bg-card dark:bg-gray-800 border border-gray-200 dark:border-gray-700 rounded-xl transition-shadow hover:shadow-xl text-gray-700 dark:text-gray-300">
+                    Evaluation &amp; Ranking: Score ideas against real-world criteria (feasibility, impact, effort) to prioritize the most promising.
+                  </li><li class="mb-4 p-6 bg-card dark:bg-gray-800 border border-gray-200 dark:border-gray-700 rounded-xl transition-shadow hover:shadow-xl text-gray-700 dark:text-gray-300">
+                    Prototyping: Build low-fidelity mock-ups that allow fast learning without heavy investment.
+                  </li><li class="mb-4 p-6 bg-card dark:bg-gray-800 border border-gray-200 dark:border-gray-700 rounded-xl transition-shadow hover:shadow-xl text-gray-700 dark:text-gray-300">
+                    Validation: Test prototypes with actual users or stakeholders and collect actionable feedback.
+                  </li><li class="mb-4 p-6 bg-card dark:bg-gray-800 border border-gray-200 dark:border-gray-700 rounded-xl transition-shadow hover:shadow-xl text-gray-700 dark:text-gray-300">
+                    Deployment Plan: Apply insights to enhance the solution, reduce risk, and prepare for deployment and scaling.
+                  </li></ul>
+                </div>
+              </section>
+<section id="solution-structure" class="py-12 md:py-16 px-4 sm:px-6 lg:px-8 bg-background dark:bg-gray-900">
+                <div class="container mx-auto">
+                  <h2 class="text-3xl md:text-4xl font-bold text-center mb-10 md:mb-12 text-gray-900 dark:text-gray-100">Solution Structure</h2>
+                  <div class="grid gap-8 md:gap-12 items-center md:grid-cols-2">
+                            <div class="md:order-2"><div class="flex justify-center items-center"><img src="assets/2.webp" alt="Solution Structure" class="rounded-xl  object-contain max-h-[500px] lg:max-h-[600px] w-full" data-ai-hint="solution-structure"></div></div>
+                            <div class="md:order-1 text-gray-700 dark:text-gray-300"><li id="modular-work-units-self-conta" class="my-1 text-gray-700 dark:text-gray-300 ">Modular Work Units: Self-contained building blocks you can plug into existing workflows or run as standalone sprints</li>
+<li id="inputs-key-documents-concept" class="my-1 text-gray-700 dark:text-gray-300 ">Inputs: Key documents, concepts, and tools such as strategic plans, customer personas, and ideation templates</li>
+<li id="tasks" class="my-1 text-gray-700 dark:text-gray-300 ">Tasks:<ul class="list-disc pl-5 mt-1"><li id="autonomous-exercises-pre-reco" class="my-1 text-gray-700 dark:text-gray-300 ">Autonomous exercises: Pre-recorded videos and guided worksheets for self-paced work</li>
+<li id="guided-workshops-live-or-virt" class="my-1 text-gray-700 dark:text-gray-300 ">Guided workshops: Live or virtual sessions led by our innovation coaches to deepen learning and collaboration</li></ul></li>
+<li id="outputs-tangible-deliverables" class="my-1 text-gray-700 dark:text-gray-300 ">Outputs: Tangible deliverables like opportunity maps, idea scorecards, prototype schematics, and user-test summaries</li></div>
+                          </div>
+                </div>
+              </section>
+<section id="process-flow" class="py-12 md:py-16 px-4 sm:px-6 lg:px-8 bg-background dark:bg-gray-900">
+                <div class="container mx-auto">
+                  <h2 class="text-3xl md:text-4xl font-bold text-center mb-10 md:mb-12 text-gray-900 dark:text-gray-100">Our Process Flow</h2>
+                  <div class="prose dark:prose-invert max-w-none text-gray-700 dark:text-gray-300"><p id="we-provide-minimalist-educatio" class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 dark:text-gray-300 ">We provide minimalist educational content to ensure clients grasp concepts before activities to maximize workshop efficiency with a shared vocabulary. This includes pre-session short clips (3–5 minutes) explaining core concepts, best practices, and case studies, as well as one-page briefs summarizing definitions, frameworks, and activity instructions.</p>
+<h3 id="self-diagnostic-ai-guided" class="font-bold text-2xl md:text-3xl my-4 text-gray-800 dark:text-gray-200 ">Self-Diagnostic (AI-Guided)</h3>
+<p id="method-online-chatbot-questio" class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 dark:text-gray-300 ">Method: Online chatbot questionnaire that assesses current innovation capabilities and mindset</p>
+<p id="focus-measures-risk-tolerance" class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 dark:text-gray-300 ">Focus: Measures risk tolerance, leadership buy-in, resource allocation, failure mindset, etc., and generates a personalized report highlighting strengths and gaps</p>
+<h3 id="initial-diagnosis" class="font-bold text-2xl md:text-3xl my-4 text-gray-800 dark:text-gray-200 ">Initial Diagnosis</h3>
+<p id="method-facilitated-discovery" class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 dark:text-gray-300 ">Method: Facilitated discovery session where stakeholders map out existing processes, pain points, and potential quick wins</p>
+<p id="deliverable-current-state-o" class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 dark:text-gray-300 ">Deliverable: Current State &amp; Opportunity Map – a visual chart showing high-impact areas to address first</p>
+<h3 id="idea-generation-evaluation" class="font-bold text-2xl md:text-3xl my-4 text-gray-800 dark:text-gray-200 ">Idea Generation &amp; Evaluation</h3>
+<p id="activities-guided-brainstormi" class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 dark:text-gray-300 ">Activities: Guided brainstorming (e.g., SCAMPER, How-Might-We) followed by weighted scoring of ideas</p>
+<p id="deliverable-ranked-idea-backl" class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 dark:text-gray-300 ">Deliverable: Ranked Idea Backlog with rationale and estimated benefits for each concept</p>
+<h3 id="prototype-conceptualization" class="font-bold text-2xl md:text-3xl my-4 text-gray-800 dark:text-gray-200 ">Prototype Conceptualization</h3>
+<p id="method-rapid-design-sprint-to" class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 dark:text-gray-300 ">Method: Rapid design sprint to sketch, decide, and storyboard key features</p>
+<p id="deliverables-low-fidelity-moc" class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 dark:text-gray-300 ">Deliverables: Low-fidelity mock-ups and user journey sketches to illustrate core experiences</p>
+<h3 id="validation-feedback" class="font-bold text-2xl md:text-3xl my-4 text-gray-800 dark:text-gray-200 ">Validation &amp; Feedback</h3>
+<p id="activities-user-interviews-an" class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 dark:text-gray-300 ">Activities: User interviews and usability tests to capture quantitative and qualitative data</p>
+<p id="deliverable-feedback-insigh" class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 dark:text-gray-300 ">Deliverable: Feedback &amp; Insights Report with actionable recommendations on improvements, pivots, or eliminations</p>
+<h3 id="iteration-refinement" class="font-bold text-2xl md:text-3xl my-4 text-gray-800 dark:text-gray-200 ">Iteration &amp; Refinement</h3>
+<p id="purpose-continuous-improvemen" class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 dark:text-gray-300 ">Purpose: Continuous improvement through lean cycles to refine prototypes, optimize features, and prepare for pilot launch</p>
+<p id="deliverable-refined-prototype" class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 dark:text-gray-300 ">Deliverable: Refined Prototype &amp; Next Steps Plan outlining final mock-ups and a roadmap for scaling</p></div>
+                </div>
+              </section>
+<section id="integration" class="py-12 md:py-16 px-4 sm:px-6 lg:px-8 bg-background dark:bg-gray-900">
+                <div class="container mx-auto">
+                  <h2 class="text-3xl md:text-4xl font-bold text-center mb-10 md:mb-12 text-gray-900 dark:text-gray-100">Integration with Best-Practice Methodologies</h2>
+                  <div class="grid gap-8 md:gap-12 items-center md:grid-cols-2">
+                            <div class="md:order-1"><div class="flex justify-center items-center"><img src="assets/3.webp" alt="Integration with Methodologies" class="rounded-xl  object-contain max-h-[500px] lg:max-h-[600px] w-full" data-ai-hint="integration-with-methodologies"></div></div>
+                            <div class="md:order-2 text-gray-700 dark:text-gray-300"><li id="24-steps-of-disciplined-entrep" class="my-1 text-gray-700 dark:text-gray-300 ">24 Steps of Disciplined Entrepreneurship: End-to-end framework for building a scalable venture from idea to launch</li>
+<li id="lean-startup-buildmeasurele" class="my-1 text-gray-700 dark:text-gray-300 ">Lean Startup: Build–Measure–Learn cycles emphasizing quick experiments and data-driven decisions</li>
+<li id="running-lean-rapid-hypothesis" class="my-1 text-gray-700 dark:text-gray-300 ">Running Lean: Rapid hypothesis validation to align teams on assumptions, risks, and metrics</li>
+<li id="design-thinking-empathize-d" class="my-1 text-gray-700 dark:text-gray-300 ">Design Thinking: Empathize → Define → Ideate → Prototype → Test for human-centered solutions</li></div>
+                          </div>
+                </div>
+              </section>
+<section id="benefits" class="py-12 md:py-16 px-4 sm:px-6 lg:px-8 bg-background dark:bg-gray-900">
+                <div class="container mx-auto">
+                  <h2 class="text-3xl md:text-4xl font-bold text-center mb-10 md:mb-12 text-gray-900 dark:text-gray-100">Key Benefits</h2>
+                  <div class="prose dark:prose-invert max-w-none text-gray-700 dark:text-gray-300"><li id="clarity-defined-path-eradicat" class="my-1 text-gray-700 dark:text-gray-300 ">Clarity: Defined path eradicates confusion and aligns teams</li>
+<li id="speed-jump-from-zero-to-proto" class="my-1 text-gray-700 dark:text-gray-300 ">Speed: Jump from zero to prototype in weeks, not months</li>
+<li id="risk-mitigation-test-assumpti" class="my-1 text-gray-700 dark:text-gray-300 ">Risk Mitigation: Test assumptions early to reduce costly missteps</li>
+<li id="empowerment-builds-client-cap" class="my-1 text-gray-700 dark:text-gray-300 ">Empowerment: Builds client capability through guided autonomy and learning</li></div>
+                </div>
+              </section>
+<section id="ideal-clients" class="py-12 md:py-16 px-4 sm:px-6 lg:px-8 bg-background dark:bg-gray-900">
+                <div class="container mx-auto">
+                  <h2 class="text-3xl md:text-4xl font-bold text-center mb-10 md:mb-12 text-gray-900 dark:text-gray-100">Clients</h2>
+                  <ul class="list-none p-0 max-w-3xl mx-auto"><li class="mb-4 p-6 bg-card dark:bg-gray-800 border border-gray-200 dark:border-gray-700 rounded-xl transition-shadow hover:shadow-xl text-gray-700 dark:text-gray-300">
+                    Allocated innovation budget: Companies that have dedicated funding for R&amp;D or innovation initiatives
+                  </li><li class="mb-4 p-6 bg-card dark:bg-gray-800 border border-gray-200 dark:border-gray-700 rounded-xl transition-shadow hover:shadow-xl text-gray-700 dark:text-gray-300">
+                    Desire for structured innovation: Organizations looking for a clear process to manage their innovation efforts effectively.
+                  </li><li class="mb-4 p-6 bg-card dark:bg-gray-800 border border-gray-200 dark:border-gray-700 rounded-xl transition-shadow hover:shadow-xl text-gray-700 dark:text-gray-300">
+                    Awareness of the need to innovate: Teams that recognize stagnation risks and are motivated to adopt new approaches
+                  </li><li class="mb-4 p-6 bg-card dark:bg-gray-800 border border-gray-200 dark:border-gray-700 rounded-xl transition-shadow hover:shadow-xl text-gray-700 dark:text-gray-300">
+                    No established innovation process: Organizations lacking internal frameworks, templates, or experience to systematically innovate
+                  </li></ul>
+                </div>
+              </section>
+<section id="case-example" class="py-12 md:py-16 px-4 sm:px-6 lg:px-8 bg-background dark:bg-gray-900">
+                <div class="container mx-auto">
+                  <h2 class="text-3xl md:text-4xl font-bold text-center mb-10 md:mb-12 text-gray-900 dark:text-gray-100">Case Example</h2>
+                  <div class="grid gap-8 md:gap-12 items-center md:grid-cols-2">
+                            <div class="md:order-1"><div class="flex justify-center items-center"><img src="assets/4.webp" alt="Case Example" class="rounded-xl  object-contain max-h-[500px] lg:max-h-[600px] w-full" data-ai-hint="case-example"></div></div>
+                            <div class="md:order-2 text-gray-700 dark:text-gray-300"><h3 id="mid-sized-event-company-40-employees" class="font-bold text-2xl md:text-3xl my-4 text-gray-800 dark:text-gray-200 ">Mid-Sized Event Company (40 Employees)</h3>
+<li id="profile-overwhelmed-with-manu" class="my-1 text-gray-700 dark:text-gray-300 ">Profile: Overwhelmed with manual processes yet eager to innovate without derailing operations</li>
+<li id="application-steps" class="my-1 text-gray-700 dark:text-gray-300 ">Application Steps:<ul class="list-disc pl-5 mt-1"><li id="ai-self-diagnostic-chatbot-ide" class="my-1 text-gray-700 dark:text-gray-300 ">AI Self-Diagnostic Chatbot identifies lack of formal process and moderate risk aversion</li>
+<li id="initial-diagnosis-workshop-unc" class="my-1 text-gray-700 dark:text-gray-300 ">Initial Diagnosis Workshop uncovers scheduling chaos and manual speaker coordination</li>
+<li id="idea-workshop-generates-concep" class="my-1 text-gray-700 dark:text-gray-300 ">Idea Workshop Generates concepts like speaker-management dashboard and email automation</li>
+<li id="prototype-sprint-designs-wiref" class="my-1 text-gray-700 dark:text-gray-300 ">Prototype Sprint Designs wireframes for dashboard and automated flow in one day</li>
+<li id="validation-conducts-usability" class="my-1 text-gray-700 dark:text-gray-300 ">Validation Conducts usability tests with staff and a pilot cohort of attendees, gathering NPS and task-completion data</li>
+<li id="iterations-refines-ui-elements" class="my-1 text-gray-700 dark:text-gray-300 ">Iterations Refines UI elements and workflow logic; simplifies onboarding steps</li></ul></li>
+<li id="outcome-pilot-tool-saves-30" class="my-1 text-gray-700 dark:text-gray-300 ">Outcome: Pilot tool saves 30 % of planning time and increases on-time communications by 80 %</li>
+<li id="insights-leadership-will-fund" class="my-1 text-gray-700 dark:text-gray-300 ">Insights: Leadership will fund full rollout after seeing pilot ROI and show openness to external tech partnerships, preferring small-scale pilots before enterprise-wide changes</li></div>
+                          </div>
+                </div>
+              </section>
+<section id="block-l1-rp7je" class="py-12 md:py-16 px-4 sm:px-6 lg:px-8  bg-background dark:bg-gray-900">
+                <div class="container mx-auto">
+                  
+                  <div class="prose dark:prose-invert max-w-none  text-gray-700 dark:text-gray-300"></div>
+                  
+                </div>
+              </section>
   </div>
-
-  <script defer type="text/javascript" src="/main.js"></script>
 </body>
 </html>
-]]>
