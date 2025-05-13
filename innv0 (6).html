@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>innV0</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    
+    @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap');
+    body { font-family: 'Inter', sans-serif; }
+    :root {
+      --background: 0 0% 100%;
+      --foreground: 240 10% 3.9%;
+      --card: 0 0% 100%;
+      --card-foreground: 240 10% 3.9%;
+      --popover: 0 0% 100%;
+      --popover-foreground: 240 10% 3.9%;
+      --primary: 240 5.9% 10%;
+      --primary-foreground: 0 0% 98%;
+      --secondary: 240 4.8% 95.9%;
+      --secondary-foreground: 240 5.9% 10%;
+      --muted: 240 4.8% 90%; /* Updated Muted for light mode */
+      --muted-foreground: 240 3.8% 46.1%; /* Updated Muted Foreground for light mode */
+      --accent: 240 5.9% 10%;
+      --accent-foreground: 0 0% 98%;
+      --destructive: 0 84.2% 60.2%;
+      --destructive-foreground: 0 0% 98%;
+      --border: 240 5.9% 90%;
+      --input: 240 5.9% 90%;
+      --ring: 240 5.9% 10%;
+      --radius: 0.5rem;
+    }
+    .dark {
+      --background: 240 10% 3.9%;
+      --foreground: 0 0% 98%;
+      --card: 240 10% 3.9%;
+      --card-foreground: 0 0% 98%;
+      --popover: 240 10% 3.9%;
+      --popover-foreground: 0 0% 98%;
+      --primary: 0 0% 98%;
+      --primary-foreground: 240 5.9% 10%;
+      --secondary: 240 3.7% 15.9%;
+      --secondary-foreground: 0 0% 98%;
+      --muted: 240 3.7% 15.9%; /* Updated Muted for dark mode */
+      --muted-foreground: 240 5% 64.9%; /* Updated Muted Foreground for dark mode */
+      --accent: 0 0% 98%;
+      --accent-foreground: 240 5.9% 10%;
+      --destructive: 0 62.8% 30.6%;
+      --destructive-foreground: 0 0% 98%;
+      --border: 240 3.7% 15.9%;
+      --input: 240 3.7% 15.9%;
+      --ring: 0 0% 98%;
+    }
+    * { border-color: hsl(var(--border)); }
+    body { background-color: hsl(var(--background)); color: hsl(var(--foreground)); margin: 0; padding: 0; }
+    .highlight-first-sentence strong:first-child { font-weight: bold; }
+    header.sticky {
+        background-color: hsl(var(--background)); /* Fully opaque */
+        /* backdrop-filter: blur(10px); */ /* Optional: remove if causing issues or not desired with opaque bg */
+        /* -webkit-backdrop-filter: blur(10px); */
+    }
+    header.sticky .container > div:first-child { 
+        color: hsl(var(--foreground));
+    }
+    .dark header.sticky .container > div:first-child {
+        color: hsl(var(--foreground));
+    }
+    header.sticky nav a {
+        color: hsl(var(--muted-foreground)); 
+    }
+    header.sticky nav a:hover {
+        color: hsl(var(--primary)); 
+    }
+    .dark header.sticky nav a {
+        color: hsl(var(--muted-foreground));
+    }
+    .dark header.sticky nav a:hover {
+        color: hsl(var(--primary));
+    }
+
+    /* Styles for code blocks (used if user guide content had them) */
+    .prose code {
+      color: hsl(var(--foreground)); 
+      background-color: hsl(var(--muted)); 
+      padding: 0.1em 0.3em;
+      border-radius: 0.25em;
+    }
+    .prose pre {
+      background-color: hsl(var(--muted));
+      color: hsl(var(--foreground));
+      padding: 1em;
+      border-radius: 0.5em;
+      overflow-x: auto;
+    }
+    .prose pre code {
+      background-color: transparent; 
+      padding: 0;
+    }
+    .dark .prose code {
+       color: hsl(var(--foreground));
+       background-color: hsl(var(--muted));
+    }
+    .dark .prose pre {
+      background-color: hsl(var(--muted));
+      color: hsl(var(--foreground));
+    }
+    .dark .prose pre code {
+      background-color: transparent;
+    }
+  
+  </style>
+  <script>
+    if (localStorage.theme === 'dark' || (!('theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+      document.documentElement.classList.add('dark')
+    } else {
+      document.documentElement.classList.remove('dark')
+    }
+    // Smooth scroll for anchor links
+    document.addEventListener('DOMContentLoaded', () => {
+      document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener('click', function (e) {
+          e.preventDefault();
+          const targetId = this.getAttribute('href');
+          const targetElement = document.querySelector(targetId);
+          if (targetElement) {
+            const headerElement = document.querySelector('header.sticky');
+            const headerOffset = headerElement ? headerElement.offsetHeight : 0;
+            const elementPosition = targetElement.getBoundingClientRect().top;
+            const offsetPosition = elementPosition + window.pageYOffset - headerOffset;
+            
+            window.scrollTo({
+              top: offsetPosition,
+              behavior: "smooth"
+            });
+          }
+        });
+      });
+    });
+  </script>
+</head>
+<body class="antialiased text-gray-800 dark:text-gray-200 bg-background">
+  <div id="page-container">
+    <section id="innv0" class="py-12 md:py-16 px-4 sm:px-6 lg:px-8  bg-background dark:bg-gray-900">
+                <div class="container mx-auto">
+                  
+                  <div class="prose dark:prose-invert max-w-none  text-gray-700 dark:text-gray-300"><a href="/innv0" class="text-accent-foreground bg-accent/20 px-1 rounded hover:underline">innV0</a></div>
+                  
+                </div>
+              </section>
+<header id="site-navigation-header" class="shadow-md sticky top-0 z-50 border-b border-border/50">
+                <div class="container mx-auto flex items-center justify-between p-4">
+                  <div class="text-xl font-bold text-foreground dark:text-foreground">innV0</div>
+                  <nav class="flex space-x-1 sm:space-x-2 md:space-x-4"><a href="./innV0_logseq/published/#/page/innv0_labs" class="px-3 py-2 rounded-md text-sm font-medium transition-colors">Lab</a></nav>
+                </div>
+              </header>
+<section id="hero" class="py-12 md:py-16 px-4 sm:px-6 lg:px-8 bg-gray-100 dark:bg-gray-800">
+        <div class="container mx-auto text-center">
+          <div class="mb-8"><img src="assets/main.webp" alt="null" class="w-full max-w-4xl mx-auto h-auto md:max-h-[600px] object-cover rounded-xl shadow-2xl" data-ai-hint="null"></div>
+          <h1 class="text-4xl sm:text-5xl lg:text-6xl font-extrabold mb-6 text-gray-900 dark:text-gray-100">Innovation Kick-off Program</h1>
+          <p class="text-lg sm:text-xl text-gray-700 dark:text-gray-300 mb-10 max-w-2xl mx-auto">Structured methodology to guide you from zero to validated prototype</p>
+          <a href="mailto:lucas@lucascervera.com" target="_self"   id="contact" class="inline-block bg-gray-900 text-white hover:bg-gray-700 dark:bg-gray-200 dark:text-black dark:hover:bg-gray-400 font-semibold px-6 py-3 rounded-md shadow-md transition-colors transform hover:scale-105 ">Contact</a>
+        </div></section>
+<section id="value-proposition" class="py-12 md:py-16 px-4 sm:px-6 lg:px-8 bg-background dark:bg-gray-900">
+                <div class="container mx-auto">
+                  <h2 class="text-3xl md:text-4xl font-bold text-center mb-10 md:mb-12 text-gray-900 dark:text-gray-100">Value Proposition</h2>
+                  <div class="grid gap-8 md:gap-12 items-center md:grid-cols-2">
+                            <div class="md:order-1"></div>
+                            <div class="md:order-2 text-gray-700 dark:text-gray-300"></div>
+                          </div>
+                </div>
+              </section>
+<section id="phases" class="py-12 md:py-16 px-4 sm:px-6 lg:px-8 bg-background dark:bg-gray-900">
+                <div class="container mx-auto">
+                  <h2 class="text-3xl md:text-4xl font-bold text-center mb-10 md:mb-12 text-gray-900 dark:text-gray-100">Our Phases</h2>
+                  <ul class="list-none p-0 max-w-3xl mx-auto"><li class="mb-4 p-6 bg-card dark:bg-gray-800 border border-gray-200 dark:border-gray-700 rounded-xl transition-shadow hover:shadow-xl text-gray-700 dark:text-gray-300">
+                    Identification: Systematically uncover unmet needs, market gaps, and strategic opportunities.
+                  </li><li class="mb-4 p-6 bg-card dark:bg-gray-800 border border-gray-200 dark:border-gray-700 rounded-xl transition-shadow hover:shadow-xl text-gray-700 dark:text-gray-300">
+                    Evaluation &amp; Ranking: Score ideas against real-world criteria (feasibility, impact, effort) to prioritize the most promising.
+                  </li><li class="mb-4 p-6 bg-card dark:bg-gray-800 border border-gray-200 dark:border-gray-700 rounded-xl transition-shadow hover:shadow-xl text-gray-700 dark:text-gray-300">
+                    Prototyping: Build low-fidelity mock-ups that allow fast learning without heavy investment.
+                  </li><li class="mb-4 p-6 bg-card dark:bg-gray-800 border border-gray-200 dark:border-gray-700 rounded-xl transition-shadow hover:shadow-xl text-gray-700 dark:text-gray-300">
+                    Validation: Test prototypes with actual users or stakeholders and collect actionable feedback.
+                  </li><li class="mb-4 p-6 bg-card dark:bg-gray-800 border border-gray-200 dark:border-gray-700 rounded-xl transition-shadow hover:shadow-xl text-gray-700 dark:text-gray-300">
+                    Deployment Plan: Apply insights to enhance the solution, reduce risk, and prepare for deployment and scaling.
+                  </li></ul>
+                </div>
+              </section>
+<section id="solution-structure" class="py-12 md:py-16 px-4 sm:px-6 lg:px-8 bg-background dark:bg-gray-900">
+                <div class="container mx-auto">
+                  <h2 class="text-3xl md:text-4xl font-bold text-center mb-10 md:mb-12 text-gray-900 dark:text-gray-100">Solution Structure</h2>
+                  <div class="grid gap-8 md:gap-12 items-center md:grid-cols-2">
+                            <div class="md:order-2"></div>
+                            <div class="md:order-1 text-gray-700 dark:text-gray-300"></div>
+                          </div>
+                </div>
+              </section>
+<section id="process-flow" class="py-12 md:py-16 px-4 sm:px-6 lg:px-8 bg-background dark:bg-gray-900">
+                <div class="container mx-auto">
+                  <h2 class="text-3xl md:text-4xl font-bold text-center mb-10 md:mb-12 text-gray-900 dark:text-gray-100">Our Process Flow</h2>
+                  <div class="prose dark:prose-invert max-w-none text-gray-700 dark:text-gray-300"><p id="we-provide-minimalist-educatio" class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 dark:text-gray-300 ">We provide minimalist educational content to ensure clients grasp concepts before activities to maximize workshop efficiency with a shared vocabulary. This includes pre-session short clips (3–5 minutes) explaining core concepts, best practices, and case studies, as well as one-page briefs summarizing definitions, frameworks, and activity instructions.</p>
+<h3 id="self-diagnostic-ai-guided" class="font-bold text-2xl md:text-3xl my-4 text-gray-800 dark:text-gray-200 ">Self-Diagnostic (AI-Guided)</h3>
+<p id="method-online-chatbot-questio" class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 dark:text-gray-300 ">Method: Online chatbot questionnaire that assesses current innovation capabilities and mindset</p>
+<p id="focus-measures-risk-tolerance" class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 dark:text-gray-300 ">Focus: Measures risk tolerance, leadership buy-in, resource allocation, failure mindset, etc., and generates a personalized report highlighting strengths and gaps</p>
+<h3 id="initial-diagnosis" class="font-bold text-2xl md:text-3xl my-4 text-gray-800 dark:text-gray-200 ">Initial Diagnosis</h3>
+<p id="method-facilitated-discovery" class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 dark:text-gray-300 ">Method: Facilitated discovery session where stakeholders map out existing processes, pain points, and potential quick wins</p>
+<p id="deliverable-current-state-o" class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 dark:text-gray-300 ">Deliverable: Current State &amp; Opportunity Map – a visual chart showing high-impact areas to address first</p>
+<h3 id="idea-generation-evaluation" class="font-bold text-2xl md:text-3xl my-4 text-gray-800 dark:text-gray-200 ">Idea Generation &amp; Evaluation</h3>
+<p id="activities-guided-brainstormi" class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 dark:text-gray-300 ">Activities: Guided brainstorming (e.g., SCAMPER, How-Might-We) followed by weighted scoring of ideas</p>
+<p id="deliverable-ranked-idea-backl" class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 dark:text-gray-300 ">Deliverable: Ranked Idea Backlog with rationale and estimated benefits for each concept</p>
+<h3 id="prototype-conceptualization" class="font-bold text-2xl md:text-3xl my-4 text-gray-800 dark:text-gray-200 ">Prototype Conceptualization</h3>
+<p id="method-rapid-design-sprint-to" class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 dark:text-gray-300 ">Method: Rapid design sprint to sketch, decide, and storyboard key features</p>
+<p id="deliverables-low-fidelity-moc" class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 dark:text-gray-300 ">Deliverables: Low-fidelity mock-ups and user journey sketches to illustrate core experiences</p>
+<h3 id="validation-feedback" class="font-bold text-2xl md:text-3xl my-4 text-gray-800 dark:text-gray-200 ">Validation &amp; Feedback</h3>
+<p id="activities-user-interviews-an" class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 dark:text-gray-300 ">Activities: User interviews and usability tests to capture quantitative and qualitative data</p>
+<p id="deliverable-feedback-insigh" class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 dark:text-gray-300 ">Deliverable: Feedback &amp; Insights Report with actionable recommendations on improvements, pivots, or eliminations</p>
+<h3 id="iteration-refinement" class="font-bold text-2xl md:text-3xl my-4 text-gray-800 dark:text-gray-200 ">Iteration &amp; Refinement</h3>
+<p id="purpose-continuous-improvemen" class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 dark:text-gray-300 ">Purpose: Continuous improvement through lean cycles to refine prototypes, optimize features, and prepare for pilot launch</p>
+<p id="deliverable-refined-prototype" class="mb-4 text-base md:text-lg leading-relaxed text-gray-700 dark:text-gray-300 ">Deliverable: Refined Prototype &amp; Next Steps Plan outlining final mock-ups and a roadmap for scaling</p></div>
+                </div>
+              </section>
+<section id="integration" class="py-12 md:py-16 px-4 sm:px-6 lg:px-8 bg-background dark:bg-gray-900">
+                <div class="container mx-auto">
+                  <h2 class="text-3xl md:text-4xl font-bold text-center mb-10 md:mb-12 text-gray-900 dark:text-gray-100">Integration with Best-Practice Methodologies</h2>
+                  <div class="grid gap-8 md:gap-12 items-center md:grid-cols-2">
+                            <div class="md:order-1"></div>
+                            <div class="md:order-2 text-gray-700 dark:text-gray-300"></div>
+                          </div>
+                </div>
+              </section>
+<section id="benefits" class="py-12 md:py-16 px-4 sm:px-6 lg:px-8 bg-background dark:bg-gray-900">
+                <div class="container mx-auto">
+                  <h2 class="text-3xl md:text-4xl font-bold text-center mb-10 md:mb-12 text-gray-900 dark:text-gray-100">Key Benefits</h2>
+                  <div class="prose dark:prose-invert max-w-none text-gray-700 dark:text-gray-300"><h3 id="key-benefits" class="font-bold text-2xl md:text-3xl my-4 text-gray-800 dark:text-gray-200 ">Key Benefits</h3>
+<li id="clarity-defined-path-eradicat" class="my-1 text-gray-700 dark:text-gray-300 ">Clarity: Defined path eradicates confusion and aligns teams</li>
+<li id="speed-jump-from-zero-to-proto" class="my-1 text-gray-700 dark:text-gray-300 ">Speed: Jump from zero to prototype in weeks, not months</li>
+<li id="risk-mitigation-test-assumpti" class="my-1 text-gray-700 dark:text-gray-300 ">Risk Mitigation: Test assumptions early to reduce costly missteps</li>
+<li id="empowerment-builds-client-cap" class="my-1 text-gray-700 dark:text-gray-300 ">Empowerment: Builds client capability through guided autonomy and learning</li></div>
+                </div>
+              </section>
+<section id="ideal-clients" class="py-12 md:py-16 px-4 sm:px-6 lg:px-8 bg-background dark:bg-gray-900">
+                <div class="container mx-auto">
+                  <h2 class="text-3xl md:text-4xl font-bold text-center mb-10 md:mb-12 text-gray-900 dark:text-gray-100">Clients</h2>
+                  <ul class="list-none p-0 max-w-3xl mx-auto"><li class="mb-4 p-6 bg-card dark:bg-gray-800 border border-gray-200 dark:border-gray-700 rounded-xl transition-shadow hover:shadow-xl text-gray-700 dark:text-gray-300">
+                    Allocated innovation budget: Companies that have dedicated funding for R&amp;D or innovation initiatives
+                  </li><li class="mb-4 p-6 bg-card dark:bg-gray-800 border border-gray-200 dark:border-gray-700 rounded-xl transition-shadow hover:shadow-xl text-gray-700 dark:text-gray-300">
+                    Desire for structured innovation: Organizations looking for a clear process to manage their innovation efforts effectively.
+                  </li><li class="mb-4 p-6 bg-card dark:bg-gray-800 border border-gray-200 dark:border-gray-700 rounded-xl transition-shadow hover:shadow-xl text-gray-700 dark:text-gray-300">
+                    Awareness of the need to innovate: Teams that recognize stagnation risks and are motivated to adopt new approaches
+                  </li><li class="mb-4 p-6 bg-card dark:bg-gray-800 border border-gray-200 dark:border-gray-700 rounded-xl transition-shadow hover:shadow-xl text-gray-700 dark:text-gray-300">
+                    No established innovation process: Organizations lacking internal frameworks, templates, or experience to systematically innovate
+                  </li></ul>
+                </div>
+              </section>
+<section id="case-example" class="py-12 md:py-16 px-4 sm:px-6 lg:px-8 bg-background dark:bg-gray-900">
+                <div class="container mx-auto">
+                  <h2 class="text-3xl md:text-4xl font-bold text-center mb-10 md:mb-12 text-gray-900 dark:text-gray-100">Case Example</h2>
+                  <div class="grid gap-8 md:gap-12 items-center md:grid-cols-2">
+                            <div class="md:order-1"></div>
+                            <div class="md:order-2 text-gray-700 dark:text-gray-300"></div>
+                          </div>
+                </div>
+              </section>
+<section id="block-t1045o2" class="py-12 md:py-16 px-4 sm:px-6 lg:px-8  bg-background dark:bg-gray-900">
+                <div class="container mx-auto">
+                  
+                  <div class="prose dark:prose-invert max-w-none  text-gray-700 dark:text-gray-300"></div>
+                  
+                </div>
+              </section>
+  </div>
+</body>
+</html>
