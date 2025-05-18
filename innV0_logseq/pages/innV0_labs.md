@@ -2,6 +2,10 @@ public:: true
 
 - ## innV0 Projects
 	- Projects where we experiment with artificial intelligence tools to learn firsthand.
+	- ## [[PragInn]]
+	  platform:: 
+	  link::
+		- Audience sentiment sent, analyzed, and presented to you. Real-time audience feedback for your events, presentations, and meetings. Capture emotional responses in real-time and understand how your audience feels at every moment of your presentation or event.
 	- ## Sent
 	  platform:: [[V0.dev]]
 	  link:: https://sent-innv0.vercel.app/
