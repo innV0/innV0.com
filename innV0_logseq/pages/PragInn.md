@@ -1,4 +1,5 @@
-# 🧠 PragInn: Pragmatic Innovation Framework
+# 🧠 PragInn (Pragmatic Innovation Framework)
+collapsed:: true
 	- ## Actionable innovation for YOUR organization
 	- ## ❓ Do any of these sound familiar?
 	  collapsed:: true
