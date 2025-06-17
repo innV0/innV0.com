@@ -1,9 +1,30 @@
+<section>
+  <div class="items-center">
+    <div class="flex w-full mx-auto text-left">
+      <div class="relative inline-flex items-center mx-auto align-middle">
+        <div class="text-center">
+          <h1 class="home max-w-4xl text-2xl font-bold leading-none tracking-tighter text-neutral-600 md:text-5xl lg:text-6xl lg:max-w-7xl">
+            title
+          </h1>
+          <p class="text-gray-500">blah blah blah</p>
+
+
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
 # Site Navigation / Header
 Lab
 # Hero Section
 ## AI Powered Innovation
 ![Value Proposition](assets/banner.webp)
-### Artificial Intelligence changes everything. We are reinventing frameworks, processes and tools to leverage the advantages brought by artificial intelligence. 
+### We are reinventing frameworks, processes and tools to leverage the advantages brought by artificial intelligence. 
+
+iNNv0 specializes in helping medium-sized organizations take their first steps in innovation management in a straightforward and effective way. We focus on identifying and implementing innovation opportunities that deliver high value with minimal risk, ensuring that innovation is accessible and practical. It won't help you win the most disruptive innovation award of the year, but it will help you start working and developing the innovation capacity in your company, by implementing pragmatic simple innovation management processes. 
+
+
 Contact
 # Innovation Kick-off Program
 ### Structured methodology to guide you from zero to validated prototype
@@ -12,13 +33,15 @@ Contact
 Image Column
 ![Value Proposition](assets/1.webp)
 Text Column
-A step-by-step innovation framework: We provide a repeatable, proven sequence of phases so you never wonder what to tackle next
-## Our Phases
-**Identification**: Systematically uncover unmet needs, market gaps, and strategic opportunities.
-**Evaluation & Ranking**: Score ideas against real-world criteria (feasibility, impact, effort) to prioritize the most promising.
-**Prototyping**: Build low-fidelity mock-ups that allow fast learning without heavy investment.
-**Validation**: Test prototypes with actual users or stakeholders and collect actionable feedback.
-**Deployment Plan**: Apply insights to enhance the solution, reduce risk, and prepare for deployment and scaling.
+## Start innovating now
+
+### Our Approach:
+- **Focus on High-Impact, Low-Risk Opportunities:** We prioritize projects that provide significant value without requiring massive investments or complex changes.
+- **Leveraging Proven Methodologies:** We use methodologies like Lean Startup and Design Thinking, adapted for intrapreneurship, to help organizations innovate from within.
+- **Simple Tools for Big Results:** Our tools include a maturity assessment to help you understand your current innovation level and a portfolio management tool to organize and develop your innovation ideas into actionable projects.
+- **Building a Culture of Innovation:** We aim to foster a mindset that values continuous improvement and sees innovation as an ongoing journey rather than an overwhelming challenge.
+- **Harnessing the Power of AI:** We explore the unprecedented opportunities that artificial intelligence offers, from streamlining administrative processes to sparking creative new product ideas.
+
 ## Solution Structure
 Image Column
 ![Solution Structure](assets/2.webp)
@@ -82,6 +105,10 @@ Validation Conducts usability tests with staff and a pilot cohort of attendees, 
 Iterations Refines UI elements and workflow logic; simplifies onboarding steps
 Outcome: Pilot tool saves 30 % of planning time and increases on-time communications by 80 %
 Insights: Leadership will fund full rollout after seeing pilot ROI and show openness to external tech partnerships, preferring small-scale pilots before enterprise-wide changes
+
+> Innovation doesn’t have to be complicated.  
+> We’re here to ensure that your organization can take meaningful steps towards a more innovative future—starting today.
+
 ## innV0 Projects
 Projects where we experiment with artificial intelligence tools to learn firsthand.
 ## Sent

@@ -1,242 +1,43 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>AI Powered Innovation</title>
-  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&family=Source+Code+Pro:wght@400;600&display=swap" rel="stylesheet">
-  <style>
-    html {
-      -webkit-font-smoothing: antialiased;
-      -moz-osx-font-smoothing: grayscale;
-      text-rendering: optimizeLegibility;
-    }
-    body {
-      font-family: 'Inter', sans-serif;
-      text-shadow:
-        0 0 2px rgba(85, 135, 162, 0.6),
-        0 0 6px rgba(85, 135, 162, 0.3);
-    }
-  </style>
+  <meta charset="UTF-8">
+  <title>innteresante</title>
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+  <meta name="description" content="Description">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0">
+  <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/docsify@4/themes/buble.css" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link
+    href="https://fonts.googleapis.com/css?family=Poppins:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i&amp;display=swap"
+    rel="stylesheet" />
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/daisyui@4.11.1/dist/full.min.css" rel="stylesheet" type="text/css" />
+  <link rel="stylesheet" href="logsify.css">
 </head>
-<body class="bg-white text-gray-900">
 
-  <!-- Header -->
-  <header class="sticky top-0 z-50 bg-white border-b border-gray-200 shadow-sm">
-    <nav class="max-w-7xl mx-auto px-4 py-3 flex justify-between items-center">
-      <div class="flex items-center">
-        <img src="assets/innv0_logo.svg" class="h-10"><span class="text-xl font-semibold ml-2" style="font-family: 'Source Code Pro', monospace;">innV0</span>
-      </div>
-      <ul class="flex space-x-6 text-sm font-medium">
-        <li><a href="#hero" class="hover:text-gray-600">Home</a></li>
-        <li><a href="#program" class="hover:text-gray-600">Program</a></li>
-        <li><a href="#value" class="hover:text-gray-600">Value</a></li>
-        <li><a href="#phases" class="hover:text-gray-600">Phases</a></li>
-        <li><a href="#process" class="hover:text-gray-600">Process</a></li>
-        <li><a href="#case" class="hover:text-gray-600">Case</a></li>
-      </ul>
-    </nav>
-  </header>
-
-  <!-- Hero Section -->
-  <section id="hero" class="relative">
-    <img src="assets/banner.webp" alt="Banner" class="w-full h-96 object-cover">
-    <div class="absolute inset-0 bg-black bg-opacity-50 flex items-center justify-center">
-      <div class="text-center text-white">
-        <h2 class="text-4xl font-bold mb-2">AI Powered Innovation</h2>
-        <p class="text-lg">Artificial Intelligence changes everything. We are reinventing innovation frameworks, processes and tools to leverage its advantages.</p>
-      </div>
-    </div>
-  </section>
-
-  <!-- Program -->
-  <section id="program" class="py-16 text-center px-4">
-    <h2 class="text-3xl font-semibold mb-4">Innovation Kick-off Program</h2>
-    <p class="mb-6 text-lg">Structured methodology to guide you from zero to validated prototype</p>
-    <a href="https://lucascervera.com" class="inline-block px-6 py-2 bg-black text-white rounded-full">Contact Us</a>
-  </section>
-
-  <!-- Value Proposition -->
-  <section id="value" class="py-16 px-4 max-w-5xl mx-auto space-y-12">
-    <div class="grid md:grid-cols-2 gap-8 items-center">
-      <img src="assets/1.webp" alt="Value Proposition" class="rounded-xl">
-      <p class="text-lg">A step-by-step innovation framework: We provide a repeatable, proven sequence of phases so you never wonder what to tackle next.</p>
-    </div>
-  </section>
-
-  <!-- Phases -->
-  <section id="phases" class="py-16 bg-gray-50 px-4">
-    <div class="max-w-3xl mx-auto">
-      <h2 class="text-2xl font-semibold mb-6">Our Phases</h2>
-      <ol class="space-y-4 border-l-4 border-black pl-6">
-        <li><strong>Identification:</strong> Systematically uncover unmet needs, market gaps, and strategic opportunities.</li>
-        <li><strong>Evaluation & Ranking:</strong> Score ideas against feasibility, impact, and effort.</li>
-        <li><strong>Prototyping:</strong> Build low-fidelity mock-ups for rapid learning.</li>
-        <li><strong>Validation:</strong> Test with users and collect actionable feedback.</li>
-        <li><strong>Deployment Plan:</strong> Refine and scale with reduced risk.</li>
-      </ol>
-    </div>
-  </section>
-
-  <!-- Solution Structure -->
-  <section class="py-16 px-4">
-    <div class="max-w-6xl mx-auto grid md:grid-cols-2 gap-12">
-      <img src="assets/2.webp" alt="Solution Structure" class="rounded-xl">
-      <div class="space-y-4">
-        <h3 class="text-xl font-semibold">Modular Work Units</h3>
-        <p>Plug-and-play tasks you can embed in existing workflows or run standalone.</p>
-        <h3 class="text-xl font-semibold">Inputs</h3>
-        <p>Strategic docs, personas, ideation templates.</p>
-        <h3 class="text-xl font-semibold">Tasks</h3>
-        <ul class="list-disc list-inside">
-          <li>Autonomous exercises</li>
-          <li>Guided workshops</li>
-        </ul>
-        <h3 class="text-xl font-semibold">Outputs</h3>
-        <p>Maps, scorecards, schematics, and summaries.</p>
-      </div>
-    </div>
-  </section>
-
-  <!-- Process Flow (Accordion Style) -->
-  <section id="process" class="py-16 bg-gray-50 px-4">
-    <div class="max-w-3xl mx-auto">
-      <h2 class="text-2xl font-semibold mb-6">Our Process Flow</h2>
-      <details class="mb-4"><summary class="cursor-pointer font-semibold">Self-Diagnostic (AI-Guided)</summary><p class="mt-2 text-gray-700">AI chatbot assesses innovation readiness, risk, leadership, and generates a report.</p></details>
-      <details class="mb-4"><summary class="cursor-pointer font-semibold">Initial Diagnosis</summary><p class="mt-2 text-gray-700">Facilitated session to identify pain points and map opportunities.</p></details>
-      <details class="mb-4"><summary class="cursor-pointer font-semibold">Idea Generation & Evaluation</summary><p class="mt-2 text-gray-700">Guided brainstorming and weighted scoring of ideas.</p></details>
-      <details class="mb-4"><summary class="cursor-pointer font-semibold">Prototype Conceptualization</summary><p class="mt-2 text-gray-700">Rapid sprints for mock-ups and user journeys.</p></details>
-      <details class="mb-4"><summary class="cursor-pointer font-semibold">Validation & Feedback</summary><p class="mt-2 text-gray-700">User testing with reports and improvements.</p></details>
-      <details class="mb-4"><summary class="cursor-pointer font-semibold">Iteration & Refinement</summary><p class="mt-2 text-gray-700">Lean cycles to optimize and prepare for launch.</p></details>
-    </div>
-  </section>
-
-  <!-- Methodologies -->
-  <section class="py-16 px-4">
-    <div class="max-w-6xl mx-auto grid md:grid-cols-2 gap-12 items-center">
-      <img src="assets/3.webp" alt="Methodologies" class="rounded-xl">
-      <div class="space-y-3">
-        <h2 class="text-2xl font-semibold">Integration with Best-Practice Methodologies</h2>
-        <ul class="list-disc list-inside">
-          <li>Disciplined Entrepreneurship</li>
-          <li>Lean Startup</li>
-          <li>Running Lean</li>
-          <li>Design Thinking</li>
-        </ul>
-      </div>
-    </div>
-  </section>
-
-  <!-- Benefits -->
-  <section class="py-16 bg-gray-50 px-4">
-    <div class="max-w-5xl mx-auto text-center">
-      <h2 class="text-2xl font-semibold mb-8">Key Benefits</h2>
-      <div class="grid md:grid-cols-2 gap-8">
-        <div><strong>Clarity</strong><p>Defined path aligns teams.</p></div>
-        <div><strong>Speed</strong><p>Prototype in weeks, not months.</p></div>
-        <div><strong>Risk Mitigation</strong><p>Test early to avoid missteps.</p></div>
-        <div><strong>Empowerment</strong><p>Guided autonomy builds internal capability.</p></div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Clients -->
-  <section class="py-16 px-4">
-    <div class="max-w-4xl mx-auto">
-      <h2 class="text-2xl font-semibold mb-6">Clients We Serve</h2>
-      <div class="grid md:grid-cols-2 gap-6">
-        <div class="border p-4 rounded-lg">Allocated innovation budget</div>
-        <div class="border p-4 rounded-lg">Desire for structured innovation</div>
-        <div class="border p-4 rounded-lg">Awareness of the need to innovate</div>
-        <div class="border p-4 rounded-lg">No established innovation process</div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Case Example -->
-  <section id="case" class="py-16 bg-gray-100 px-4">
-    <div class="max-w-3xl mx-auto">
-      <img src="assets/4.webp" alt="Case Example" class="mb-4 rounded-xl">
-      <h3 class="text-xl font-semibold mb-2">Mid-Sized Event Company (40 Employees)</h3>
-      <p class="mb-2">Overwhelmed with manual processes but eager to innovate.</p>
-      <ul class="list-disc list-inside space-y-1">
-        <li>AI Diagnostic revealed weak process, moderate risk aversion</li>
-        <li>Workshops uncovered scheduling chaos</li>
-        <li>Prototype sprint designed speaker dashboard</li>
-        <li>Usability tests showed 30% time savings, 80% better comms</li>
-        <li>Leadership greenlit full rollout after pilot ROI</li>
-      </ul>
-    </div>
-  </section>
-
-  <section class="max-w-5xl mx-auto space-y-6">
-    <h1 class="text-3xl font-bold mb-8">innV0 Projects</h1>
-    <p class="mb-8 text-gray-700">Projects where we experiment with artificial intelligence tools to learn firsthand.</p>
-
-    <!-- Sent -->
-    <div class="flex flex-col md:flex-row items-start border border-black rounded-xl p-6 gap-6">
-      <div class="flex-1">
-        <h2 class="text-2xl font-semibold"><a href="https://sent-innv0.vercel.app/" target="_blank" class="text-blue-600 underline">Sent</a></h2>
-        <p class="text-sm text-gray-600 mb-2">Platform: V0.dev</p>
-        <p class="mb-2">Audience sentiment sent, analyzed, and presented to you. Real-time audience feedback for your events, presentations, and meetings. Capture emotional responses in real-time and understand how your audience feels at every moment of your presentation or event.</p>
-        
-      </div>
-    </div>
-
-    <!-- md2slides -->
-    <div class="flex flex-col md:flex-row items-start border border-black rounded-xl p-6 gap-6">
-      <div class="flex-1">
-        <h2 class="text-2xl font-semibold"><a href="https://md2slides.innv0.com/" target="_blank" class="text-blue-600 underline">md2slides</a></h2>
-        <p class="text-sm text-gray-600 mb-2">Platform: V0.dev</p>
-        <p class="mb-2">An application that transforms markdown-formatted documents into decent-enough slide presentations using Reveal JS.</p>
-        
-      </div>
-    </div>
-
-    <!-- md2web -->
-    <div class="flex flex-col md:flex-row items-start border border-black rounded-xl p-6 gap-6">
-      <div class="flex-1">
-        <h2 class="text-2xl font-semibold"><a href="https://chatgpt.com/g/g-6825e1724cec8191a9068b1eeb1b36df-innv0-com-md2web" target="_blank" class="text-blue-600 underline">md2web</a></h2>
-        <p class="text-sm text-gray-600 mb-2">Platform: GPTs</p>
-        <p class="mb-2">An OpenAI GPT that allows you to convert Markdown files into modern web pages with great ease, using Tailwind CSS.</p>
-        
-      </div>
-    </div>
-
-    <!-- StruML -->
-    <div class="flex flex-col md:flex-row items-start border border-black rounded-xl p-6 gap-6">
-      <div class="flex-1">
-        <h2 class="text-2xl font-semibold"><a href="https://struml.com/" target="_blank" class="text-blue-600 underline">StruML</a></h2>
-        <p class="text-sm text-gray-600 mb-2">Platform: Cline</p>
-        <p class="mb-2">StruML offers a modern and intuitive interface for organizing domain knowledge through structured documents. It facilitates the creation and management of documents via a tree-like organization of items, enriched by tagging, relational linking, and detailed matrix visualizations.</p>
-        
-      </div>
-    </div>
-
-    <!-- Slicing The Pie -->
-    <div class="flex flex-col md:flex-row items-start border border-black rounded-xl p-6 gap-6">
-      <div class="flex-1">
-        <h2 class="text-2xl font-semibold">Slicing The Pie</h2>
-        <p class="text-sm text-gray-600">#coming_soon</p>
-      </div>
-    </div>
-
-    <!-- Easy web events tracker -->
-    <div class="flex flex-col md:flex-row items-start border border-black rounded-xl p-6 gap-6">
-      <div class="flex-1">
-        <h2 class="text-2xl font-semibold">Easy web events tracker</h2>
-        <p class="text-sm text-gray-600">#coming_soon</p>
-      </div>
-    </div>
-  </section>
-
-  <section id="hero" class="max-w-4xl mx-auto px-4 py-12 text-center">
-    <img src="https://lucascervera.com/assets/lucas_video.webp" alt="Lucas Cervera" class="mx-auto mb-6 rounded-full max-w-xs">
-    <h2 class="text-3xl font-bold">About Lucas Cervera</h2>
-    <p class="text-lg text-gray-600">Entrepreneur and specialized advisor in innovation and AI, founder of innV0.</p>
-  </section>
-
-
+<body>
+  <div id="app"></div>
+  <script>
+    window.$docsify = {
+      name: 'title',
+      logo: 'assets/logo.webp',
+      coverpage: false,
+      loadSidebar: false,
+      alias: {
+        '/.*/_sidebar.md': '/_sidebar.md'
+      },
+      loadNavbar: true,
+      relativePath: false,
+      ga: 'UA-XXXXX-Y',
+      darkMode: false
+    }
+  </script>
+  <!-- Docsify v4 -->
+  <script src="//cdn.jsdelivr.net/npm/docsify@4"></script>
+  <script src="https://cdn.jsdelivr.net/npm/docsify-wikilink@1"></script>
+  <script src="https://unpkg.com/docsify-betterembed@1.1.1/dist/betterEmbed.min.js"></script>
 </body>
+
 </html>
