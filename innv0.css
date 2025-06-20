@@ -3,12 +3,23 @@ h1.home {
     font-weight: 700 !important;
 }
 
+  .container-wrapper {
+
+  }
+
+  .container {
+    width: 300px;
+    background: lightblue;
+  }
+
 .content {
-    margin-top: 60px;
+    display: flex;
+    justify-content: center;  /* Centra horizontalmente */
+    height: 100vh;            /* 100% de la altura de la pantalla */
 }
 
 .markdown-section {
-    max-width: 80% !important;
+    max-width: 980px !important;
     margin: 0 auto;
     font-size: 1.2em;
     /* Centra el contenido horizontalmente */
