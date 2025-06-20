@@ -12,7 +12,7 @@
         </div>
       </div>
       <div>
-        <img src="/assets/banner.webp" data-origin="assets/banner.webp" alt="Value Proposition">
+        <iframe width="560" height=280" src="https://www.youtube.com/embed/YvzDVr70Svo?si=ioM4gjZkjXOVOunC" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
       </div>
     </div>
   </div>

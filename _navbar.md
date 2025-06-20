@@ -1,2 +1,2 @@
 - [home](/)
-- [contents](pages/contents.md)
+- [contact](pages/contact.md)

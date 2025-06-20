@@ -21,17 +21,72 @@
   <!-- You can use https://www.hyperui.dev/ in the markdown files -->
   <div id="app"></div>
 <script>
-    window.$docsify = {
-      name: 'iNNv0',
-      logo: 'assets/innv0_logo.svg',
-      coverpage: false,
-      hideSidebar: true,
-      loadNavbar: true,
-      relativePath: false,
-      ga: 'UA-XXXXX-Y',
-      darkMode: false
-    }
-  </script>
+  window.$docsify = {
+    // Existing Configurations from your code:
+    name: 'iNNv0', // Website name displayed in the sidebar. Essential for brand identity.
+    logo: 'assets/innv0_logo.svg', // Path to your logo. Crucial for visual branding.
+    coverpage: false, // If set to true, loads content from _coverpage.md as a landing page.
+                      // Consider enabling for a impactful commercial landing.
+    hideSidebar: true, // Hides the sidebar completely. Good if your main navigation is a top navbar.
+    loadNavbar: true, // Loads navbar from _navbar.md. Fundamental for commercial website navigation.
+    relativePath: false, // Determines if links are relative to the current context. False is generally safer for production.
+    ga: 'UA-XXXXX-Y', // Google Analytics tracking ID. Essential for tracking user behavior and site performance.
+                      // REMEMBER to replace 'UA-XXXXX-Y' with your actual GA tracking ID.
+    darkMode: false, // Disables dark mode. Adjust based on your preferred design aesthetic.
+
+    // Define route aliases. Useful for clean URLs or redirects (e.g., '/old-product': '/new-product-page.md').
+    // You should define your specific rules here.
+    alias: {},
+
+    // Scrolls to the top of the screen when the route changes. Improves user experience, especially on long pages.
+    auto2top: true,
+
+    // Base path of your website. Set to '/docs/' if Docsify is hosted at 'yourdomain.com/docs/'.
+    // Defaults to '/' (root of the domain).
+    basePath: '/',
+
+    // Determines if Docsify should automatically handle uncaught synchronous plugin errors, improving site stability.
+    catchPluginErrors: true,
+
+    // Prevents the newly opened external page from controlling your page (security feature).
+    externalLinkRel: 'noopener',
+
+    // Opens external links (those outside your domain) in a new browser tab/window.
+    // Recommended for commercial sites to keep users on your website.
+    externalLinkTarget: '_blank',
+
+    // Specifies the Markdown file to be used as the homepage. Defaults to 'README.md'.
+    homepage: 'README.md',
+
+    // Maximum heading level (H1, H2, etc.) to be included in the auto-generated table of contents.
+    // Set to 2 for concise TOCs.
+    maxLevel: 2,
+
+    // Merges the navbar with the sidebar on smaller screens, enhancing mobile responsiveness.
+    mergeNavbar: true,
+
+    // The URL that the website name (defined by 'name') links to.
+    // Setting to '/' ensures clicking the brand name returns to the homepage.
+    nameLink: '/',
+
+    // Enables a custom 404 Not Found page. You will need to create a `_404.md` file in your docs root.
+    // Crucial for guiding users back to relevant content on your commercial site.
+    notFoundPage: true,
+
+    // Renders a "skip to main content" link for accessibility, improving navigation for keyboard users.
+    skipLink: true,
+
+    // Maximum heading level for the table of contents displayed in the sidebar (if sidebar is enabled).
+    // This is relevant if you decide to enable the sidebar (`hideSidebar: false`).
+    subMaxLevel: 3,
+
+    // Customizes the theme color for accents (e.g., progress bar, link highlights).
+    // It's crucial to align this with your brand's color palette.
+    // For a general "white, black, and grey" look, primary styling should be done via your `innv0.css`
+    // and the chosen Docsify theme (like 'buble.css'). `themeColor` is for accent details.
+    themeColor: '#42b983', // Example accent color. REPLACE with your brand's primary accent color.
+  }
+</script>
   <!-- Docsify v4 -->
   <script src="//cdn.jsdelivr.net/npm/docsify@4"></script>
   <script src="https://cdn.jsdelivr.net/npm/docsify-wikilink@1"></script>
