@@ -22,16 +22,134 @@ We focus on identifying and implementing innovation opportunities that deliver *
 
 ---
 
+<div class="p-4 sm:p-6 md:p-8 lg:p-10 flex justify-center items-center min-h-screen bg-gray-50 text-gray-800 font-sans">
+<div class="container max-w-6xl w-full mx-auto">
+<h1 class="text-3xl sm:text-4xl lg:text-5xl font-bold text-center text-gray-900 mb-8 sm:mb-12">
+Innovation Management Framework
+</h1>
+
+<!-- Main container for dimensions -->
+<div class="flex flex-col lg:flex-row lg:space-x-8 space-y-8 lg:space-y-0 justify-center">
+
+<!-- Design Dimension -->
+<div class="w-full lg:w-1/2 p-4 rounded-xl bg-gray-100 border border-gray-300 shadow-sm flex flex-col items-center">
+<h2 class="text-xl sm:text-2xl font-semibold text-gray-900 mb-4 text-center">
+1. Design Dimension
+</h2>
+<p class="text-gray-700 text-sm sm:text-base text-center mb-6">
+This dimension focuses on establishing the strategic foundations for innovation, aligning efforts with the company's vision and overall goals.
+</p>
+
+<!-- Design Disciplines -->
+<div class="w-full flex flex-col space-y-4">
+<!-- Discipline: Maturity Assessment and Prioritization -->
+<div class="w-full p-4 rounded-lg bg-white border border-gray-200 shadow-sm">
+<h3 class="text-lg sm:text-xl font-medium text-gray-800 mb-2">
+    1.1. Maturity Assessment and Prioritization
+</h3>
+<p class="text-gray-600 text-sm">
+    A focused diagnosis to determine the organization's current state of maturity in innovation management.
+</p>
+<p class="text-gray-700 text-sm mt-2 font-semibold">
+    Tool: `evaluatioNN`
+</p>
+</div>
+
+<!-- Discipline: Organization Description -->
+<div class="w-full p-4 rounded-lg bg-white border border-gray-200 shadow-sm">
+<h3 class="text-lg sm:text-xl font-medium text-gray-800 mb-2">
+    1.2. Organization Description
+</h3>
+<p class="text-gray-600 text-sm">
+    A concise analysis of the current business model, basic organizational culture, and key capabilities.
+</p>
+<p class="text-gray-700 text-sm mt-2 font-semibold">
+    Tool: `organizatioNN`
+</p>
+</div>
+
+<!-- Discipline: Innovation Management Planning -->
+<div class="w-full p-4 rounded-lg bg-white border border-gray-200 shadow-sm">
+<h3 class="text-lg sm:text-xl font-medium text-gray-800 mb-2">
+    1.3. Innovation Management Planning
+</h3>
+<p class="text-gray-600 text-sm">
+    Creation of a simple, actionable strategic roadmap to elevate the organization's innovation maturity level.
+</p>
+<p class="text-gray-700 text-sm mt-2 font-semibold">
+    Tool: `plaNN`
+</p>
+</div>
+</div>
+</div>
+
+<!-- Execution Dimension -->
+<div class="w-full lg:w-1/2 p-4 rounded-xl bg-gray-100 border border-gray-300 shadow-sm flex flex-col items-center">
+<h2 class="text-xl sm:text-2xl font-semibold text-gray-900 mb-4 text-center">
+2. Execution Dimension
+</h2>
+<p class="text-gray-700 text-sm sm:text-base text-center mb-6">
+Once the initial strategy is defined, this dimension focuses on the implementation, management, and optimization of daily innovation activities.
+</p>
+
+<!-- Execution Disciplines -->
+<div class="w-full flex flex-col space-y-4">
+<!-- Discipline: Program Design -->
+<div class="w-full p-4 rounded-lg bg-white border border-gray-200 shadow-sm">
+<h3 class="text-lg sm:text-xl font-medium text-gray-800 mb-2">
+    2.1. Program Design
+</h3>
+<p class="text-gray-600 text-sm">
+    This involves the tactical structuring of initial programs that will drive innovation.
+</p>
+<p class="text-gray-700 text-sm mt-2 font-semibold">
+    Tool: `desigNN`
+</p>
+</div>
+
+<!-- Discipline: Opportunity Management -->
+<div class="w-full p-4 rounded-lg bg-white border border-gray-200 shadow-sm">
+<h3 class="text-lg sm:text-xl font-medium text-gray-800 mb-2">
+    2.2. Opportunity Management
+</h3>
+<p class="text-gray-600 text-sm">
+    This is the systematic process for feeding the innovation engine, focusing on identifying obvious and easily accessible opportunities.
+</p>
+<p class="text-gray-700 text-sm mt-2 font-semibold">
+    Tool: `opportuNNities`
+</p>
+</div>
+
+<!-- Discipline: Initiative Management -->
+<div class="w-full p-4 rounded-lg bg-white border border-gray-200 shadow-sm">
+<h3 class="text-lg sm:text-xl font-medium text-gray-800 mb-2">
+    2.3. Initiative Management
+</h3>
+<p class="text-gray-600 text-sm">
+    This focuses on the agile tracking and development of selected opportunities, turning them into concrete projects.
+</p>
+<p class="text-gray-700 text-sm mt-2 font-semibold">
+    Tool: `iNNitiatives`
+</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+
+
+---
+
 ## Leveraging AI for Your First Steps in Innovation
 
 Starting to innovate can seem daunting, but Artificial Intelligence (AI) offers surprisingly accessible tools to take those initial steps with confidence and effectiveness. At iNNv0, we focus on the pragmatic use of AI to simplify the beginning of your innovation journey. Here's how you can leverage it:
 
-* We work with a suite of AI-powered tools that allow us to operate with unprecedented efficiency. This means we can help you innovate at a fraction of the cost it would have taken before the latest wave of AI. We achieve this in two key ways:
-* 
+* We work with a suite of AI-powered tools that allow us to operate with unprecedented efficiency. This means we can help you innovate at a fraction of the cost it would have taken before the latest wave of AI.
 * Additionally, we help you apply robust and proven artificial intelligence to improve your own processes and find solutions to many of your organization's challenges and hurdles.
 * By integrating AI into these initial stages, you not only save time and resources but also demystify innovation, making it accessible and results-oriented from day one. It's the boost you need to get your innovation process running pragmatically and effectively.
 
-**Obsessive Internal Application of AI for Efficiency**: At iNNv0, we are passionate about AI and obsessively apply it to our own internal processes for support, assistance, advice, and consulting. This deep integration of AI allows us to offer services at a substantially lower cost compared to organizations that don't leverage the power of artificial intelligence. It's paradoxical that many innovation consultancies still operate with methodologies from before 2020, proving the adage "the shoemaker's children go barefoot."
+At iNNv0, we are passionate about AI and obsessively apply it to our own internal processes for support, assistance, advice, and consulting. This deep integration of AI allows us to offer services at a substantially lower cost compared to organizations that don't leverage the power of artificial intelligence. It's paradoxical that many innovation consultancies still operate with methodologies from before 2020, proving the adage "the shoemaker's children go barefoot."
 
 **Direct-to-Client AI Tools**
 
@@ -41,7 +159,9 @@ We've developed AI-driven solutions that our clients can use directly. This incl
 - Tools for the intelligent generation and management of innovation ideas and opportunities.
 - Systems for the management, planning, execution, and validation of innovative projects within your organization.
 
-**Fast, Personalized Diagnostics**: Forget lengthy consulting studies. With AI, we can implement conversational questionnaires (chatbots) that quickly assess your organization's current innovation status. These tools analyze your risk tolerance, leadership support, resource allocation, and mindset towards failure, generating a personalized report highlighting your key strengths and areas for improvement in minutes. It's like having an initial consultant always available.
+**Fast, Personalized Diagnostics**
+
+Forget lengthy consulting studies. With AI, we can implement conversational questionnaires (chatbots) that quickly assess your organization's current innovation status. These tools analyze your risk tolerance, leadership support, resource allocation, and mindset towards failure, generating a personalized report highlighting your key strengths and areas for improvement in minutes. It's like having an initial consultant always available.
 
 **Data-Driven Opportunity Identification**: AI can process large volumes of internal and external data to identify patterns and trends that humans might miss. This includes analyzing customer feedback, sales data, market trends, or even competitor information. In this way, AI can pinpoint high-value, low-risk innovation opportunities that align with your existing capabilities, helping you focus your efforts where they truly matter.
 
