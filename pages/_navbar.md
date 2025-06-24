@@ -5,4 +5,4 @@
 </div>
 
 - [home](/)
-- [contact](pages/contact.md)
+- [contact](contact.md)

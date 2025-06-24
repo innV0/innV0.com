@@ -25,7 +25,7 @@ We focus on identifying and implementing innovation opportunities that deliver *
 <div class="p-4 sm:p-6 md:p-8 lg:p-10 flex justify-center items-center min-h-screen bg-gray-50 text-gray-800 font-sans">
 <div class="container max-w-6xl w-full mx-auto">
 <h1 class="text-3xl sm:text-4xl lg:text-5xl font-bold text-center text-gray-900 mb-8 sm:mb-12">
-Innovation Management Framework
+Early Stage Innovation Management Framework
 </h1>
 
 <!-- Main container for dimensions -->
@@ -34,7 +34,7 @@ Innovation Management Framework
 <!-- Design Dimension -->
 <div class="w-full lg:w-1/2 p-4 rounded-xl bg-gray-100 border border-gray-300 shadow-sm flex flex-col items-center">
 <h2 class="text-xl sm:text-2xl font-semibold text-gray-900 mb-4 text-center">
-1. Design Dimension
+Design
 </h2>
 <p class="text-gray-700 text-sm sm:text-base text-center mb-6">
 This dimension focuses on establishing the strategic foundations for innovation, aligning efforts with the company's vision and overall goals.
@@ -45,33 +45,33 @@ This dimension focuses on establishing the strategic foundations for innovation,
 <!-- Discipline: Maturity Assessment and Prioritization -->
 <div class="w-full p-4 rounded-lg bg-white border border-gray-200 shadow-sm">
 <h3 class="text-lg sm:text-xl font-medium text-gray-800 mb-2">
-    1.1. Maturity Assessment and Prioritization
+    Maturity Assessment and Prioritization
 </h3>
 <p class="text-gray-600 text-sm">
     A focused diagnosis to determine the organization's current state of maturity in innovation management.
 </p>
 <p class="text-gray-700 text-sm mt-2 font-semibold">
-    Tool: `evaluatioNN`
+    Tool: [[assessmeNNt]]
 </p>
 </div>
 
 <!-- Discipline: Organization Description -->
 <div class="w-full p-4 rounded-lg bg-white border border-gray-200 shadow-sm">
 <h3 class="text-lg sm:text-xl font-medium text-gray-800 mb-2">
-    1.2. Organization Description
+    Organization Description
 </h3>
 <p class="text-gray-600 text-sm">
     A concise analysis of the current business model, basic organizational culture, and key capabilities.
 </p>
 <p class="text-gray-700 text-sm mt-2 font-semibold">
-    Tool: `organizatioNN`
+    Tool: [[organizatioNN]]
 </p>
 </div>
 
 <!-- Discipline: Innovation Management Planning -->
 <div class="w-full p-4 rounded-lg bg-white border border-gray-200 shadow-sm">
 <h3 class="text-lg sm:text-xl font-medium text-gray-800 mb-2">
-    1.3. Innovation Management Planning
+    Innovation Management Planning
 </h3>
 <p class="text-gray-600 text-sm">
     Creation of a simple, actionable strategic roadmap to elevate the organization's innovation maturity level.
@@ -86,7 +86,7 @@ This dimension focuses on establishing the strategic foundations for innovation,
 <!-- Execution Dimension -->
 <div class="w-full lg:w-1/2 p-4 rounded-xl bg-gray-100 border border-gray-300 shadow-sm flex flex-col items-center">
 <h2 class="text-xl sm:text-2xl font-semibold text-gray-900 mb-4 text-center">
-2. Execution Dimension
+Execution
 </h2>
 <p class="text-gray-700 text-sm sm:text-base text-center mb-6">
 Once the initial strategy is defined, this dimension focuses on the implementation, management, and optimization of daily innovation activities.
@@ -97,7 +97,7 @@ Once the initial strategy is defined, this dimension focuses on the implementati
 <!-- Discipline: Program Design -->
 <div class="w-full p-4 rounded-lg bg-white border border-gray-200 shadow-sm">
 <h3 class="text-lg sm:text-xl font-medium text-gray-800 mb-2">
-    2.1. Program Design
+     Program Design
 </h3>
 <p class="text-gray-600 text-sm">
     This involves the tactical structuring of initial programs that will drive innovation.
@@ -110,7 +110,7 @@ Once the initial strategy is defined, this dimension focuses on the implementati
 <!-- Discipline: Opportunity Management -->
 <div class="w-full p-4 rounded-lg bg-white border border-gray-200 shadow-sm">
 <h3 class="text-lg sm:text-xl font-medium text-gray-800 mb-2">
-    2.2. Opportunity Management
+    Opportunity Management
 </h3>
 <p class="text-gray-600 text-sm">
     This is the systematic process for feeding the innovation engine, focusing on identifying obvious and easily accessible opportunities.
@@ -123,7 +123,7 @@ Once the initial strategy is defined, this dimension focuses on the implementati
 <!-- Discipline: Initiative Management -->
 <div class="w-full p-4 rounded-lg bg-white border border-gray-200 shadow-sm">
 <h3 class="text-lg sm:text-xl font-medium text-gray-800 mb-2">
-    2.3. Initiative Management
+    Initiative Management
 </h3>
 <p class="text-gray-600 text-sm">
     This focuses on the agile tracking and development of selected opportunities, turning them into concrete projects.

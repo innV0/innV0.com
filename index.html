@@ -30,23 +30,19 @@
     coverpage: false, // If set to true, loads content from _coverpage.md as a landing page.
                       // Consider enabling for a impactful commercial landing.
     hideSidebar: true, // Hides the sidebar completely. Good if your main navigation is a top navbar.
-    loadNavbar: true, // Loads navbar from _navbar.md. Fundamental for commercial website navigation.
     relativePath: false, // Determines if links are relative to the current context. False is generally safer for production.
     ga: 'UA-XXXXX-Y', // Google Analytics tracking ID. Essential for tracking user behavior and site performance.
                       // REMEMBER to replace 'UA-XXXXX-Y' with your actual GA tracking ID.
     darkMode: false, // Disables dark mode. Adjust based on your preferred design aesthetic.
-
-    // Define route aliases. Useful for clean URLs or redirects (e.g., '/old-product': '/new-product-page.md').
-    // You should define your specific rules here.
-    alias: {},
+    alias: {}, // Define route aliases. Useful for clean URLs or redirects (e.g., '/old-product': '/new-product-page.md').
 
     // Scrolls to the top of the screen when the route changes. Improves user experience, especially on long pages.
     auto2top: true,
 
-    // Base path of your website. Set to '/docs/' if Docsify is hosted at 'yourdomain.com/docs/'.
-    // Defaults to '/' (root of the domain).
-    basePath: '/',
-
+    basePath: '/pages/',
+    homepage: 'home.md',
+    loadNavbar: '_navbar.md',
+  
     // Determines if Docsify should automatically handle uncaught synchronous plugin errors, improving site stability.
     catchPluginErrors: true,
 
@@ -56,10 +52,6 @@
     // Opens external links (those outside your domain) in a new browser tab/window.
     // Recommended for commercial sites to keep users on your website.
     externalLinkTarget: '_blank',
-
-    // Specifies the Markdown file to be used as the homepage. Defaults to 'README.md'.
-    homepage: 'README.md',
-
     // Maximum heading level (H1, H2, etc.) to be included in the auto-generated table of contents.
     // Set to 2 for concise TOCs.
     maxLevel: 2,
