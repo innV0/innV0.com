@@ -2,8 +2,8 @@
 version: 1.6.0
 author: Lucas Cervera
 status: Draft
-url: https://github.com/innV0/defiNNe/defiNNe.md
-sample: https://github.com/innV0/defiNNe/sample.md
+url: https://innv0.com/defiNNe/defiNNe.md
+sample: https://innv0.com/defiNNe/defiNNe.md
 ---
 
 # defiNNe: The Definition of Definitions
