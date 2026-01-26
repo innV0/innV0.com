@@ -8,30 +8,37 @@ url: https://innv0.com/defiNNe/defiNNe.md
 
 # defiNNe
 
-## defiNNe is a meta-definition framework designed to standardize the documentation of technical conventions, protocols, and behavioral rules.
+## defiNNe is a meta-definition framework designed to standardize the documentation of technical conventions, protocols, and behavioral rules
 
 ## Philosophy
+
 defiNNe favors individuals and interactions over processes and tools. It is inspired by The Agile Manifesto, RFC 2119 and Semantic Versioning (SemVer).
 
 ## Objectives
+
 * Machine Interoperability: Use YAML to allow definitions to be parsed by CI/CD pipelines, documentation engines, and validation scripts.
 * Developer Experience (DX): Prioritize a Source of Truth that is easily editable and searchable within text editors and version control systems.
 * Recursive Integrity: The defiNNe specification MUST use YAML Front Matter to define its own metadata.
 
 ## Specification
+
 To be considered defiNNe-compliant, a document MUST exist as a single Markdown (.md) file and MUST adhere to the following structural requirements:
 
 ### YAML Front Matter (Metadata)
+
 The document MUST begin with a YAML block fenced by triple dashes (---).
+
 * Mandatory fields: version (following SemVer) and url (canonical location).
 * Recommended fields: author, status, and sample.
 * Extensibility: Additional keys (e.g., license, tags) are ALLOWED as long as they do not conflict with mandatory fields.
 
 ### Title and Summary
+
 * H1 Title: The document MUST have a single Level 1 Heading immediately following the YAML block.
 * H2 Summary: MUST follow the H1 and consist of exactly one descriptive sentence summarizing the standard purpose.
 
 ### Mandatory Sections
+
 The document MUST include the following sections as Level 2 Headings:
 
 * Philosophy: A brief manifesto explaining the values behind the definition.
@@ -62,3 +69,4 @@ sample: [Sample Link]
 ## Template
 
 ## Examples
+````
