@@ -1,59 +1,57 @@
 ---
-version: 0.1.0
+version: 0.1.1
 author: Lucas Cervera
 status: Draft
 metamodel: https://innv0.com/defiNNe/defiNNe.md
 url: https://innv0.com/defiNNe/defiNNe.md
-sample: https://innv0.com/defiNNe/defiNNe.md
 ---
 
 # defiNNe
 
-## defiNNe is a meta-definition framework designed to standardize the way technical conventions, protocols, and behavioral rules are documented.
+## defiNNe is a meta-definition framework designed to standardize the documentation of technical conventions, protocols, and behavioral rules.
 
 ## Philosophy
-**defiNNe** favors individuals and interactions over processes and tools. It is inspired by [The Agile Manifesto](https://agilemanifesto.org/), [RFC 2119](https://www.ietf.org/rfc/rfc2119.txt) and [Semantic Versioning (SemVer)](https://semver.org/).
+defiNNe favors individuals and interactions over processes and tools. It is inspired by The Agile Manifesto, RFC 2119 and Semantic Versioning (SemVer).
 
 ## Objectives
-* **Machine Interoperability:** Use YAML to allow definitions to be parsed by CI/CD pipelines, documentation engines, and custom scripts.
-* **Developer Experience:** Prioritize a "Source of Truth" that is easily editable and searchable within text editors and version control systems.
-* **Recursive Integrity:** The `defiNNe` specification MUST use YAML Front Matter to define its own metadata.
+* Machine Interoperability: Use YAML to allow definitions to be parsed by CI/CD pipelines, documentation engines, and validation scripts.
+* Developer Experience (DX): Prioritize a Source of Truth that is easily editable and searchable within text editors and version control systems.
+* Recursive Integrity: The defiNNe specification MUST use YAML Front Matter to define its own metadata.
 
 ## Specification
-To be considered "defiNNe-compliant," a document MUST exist as a single Markdown file and MUST adhere to the following structural requirements:
+To be considered defiNNe-compliant, a document MUST exist as a single Markdown (.md) file and MUST adhere to the following structural requirements:
 
-### YAML Front Matter (The Metadata)
-The document MUST begin with a YAML block fenced by triple dashes (`---`). 
-1. This block MUST contain at least two keys: `version` and `url`.
-2. The `version` MUST follow Semantic Versioning (SemVer).
-3. The `url` MUST point to the canonical public location of the file.
+### YAML Front Matter (Metadata)
+The document MUST begin with a YAML block fenced by triple dashes (---).
+* Mandatory fields: version (following SemVer) and url (canonical location).
+* Recommended fields: author, status, and sample.
+* Extensibility: Additional keys (e.g., license, tags) are ALLOWED as long as they do not conflict with mandatory fields.
 
-### Header and Summary
-1. **H1 Title:** The document MUST have a single Level 1 Heading immediately following the YAML block.
-2. **H2 Summary:** The summary MUST be an H2 heading consisting of exactly one descriptive sentence. The H2 Summary MUST follow the H1 Title.
+### Title and Summary
+* H1 Title: The document MUST have a single Level 1 Heading immediately following the YAML block.
+* H2 Summary: MUST follow the H1 and consist of exactly one descriptive sentence summarizing the standard purpose.
 
-### 3.3. Mandatory Sections
-The document MUST include the following sections as Level 2 Headings (H2):
+### Mandatory Sections
+The document MUST include the following sections as Level 2 Headings:
 
-* **Philosophy:** A brief manifesto explaining the values behind the definition.
-* **Objectives:** A list of specific goals the definition intends to achieve.
-* **Specification:** The core rules. This section MUST use RFC 2119 keywords (**MUST**, **SHOULD**, **MAY**).
-* **Template:** A reusable Markdown snippet for implementers.
-* **Examples:** Practical applications or samples.
+* Philosophy: A brief manifesto explaining the values behind the definition.
+* Objectives: A list of specific goals the definition intends to achieve.
+* Specification: The core rules. This section MUST use RFC 2119 keywords (MUST, SHOULD, MAY). Any change adding a MUST requirement requires a Major version increment.
+* Template: A reusable Markdown snippet. To avoid parsing errors, the template code block MUST be fenced with four backticks (````) or equivalent blocks.
+* Examples: Practical applications or samples of the standard in use.
 
 ## Template
-New definitions MUST use the following structure:
 
-```markdown
+````markdown
 ---
 version: [X.Y.Z]
-url: [Public Link]
-sample: [Public Link]
+url: [Canonical Link]
+sample: [Sample Link]
 ---
 
 # [NAME_OF_THE_DEFINITION]
 
-## [Summary]
+## [One sentence summary]
 
 ## Philosophy
 
@@ -62,3 +60,5 @@ sample: [Public Link]
 ## Specification
 
 ## Template
+
+## Examples
