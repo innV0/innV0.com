@@ -1,18 +1,18 @@
 ---
-version: 1.6.0
+version: 0.1.0
 author: Lucas Cervera
 status: Draft
+metamodel: https://innv0.com/defiNNe/defiNNe.md
 url: https://innv0.com/defiNNe/defiNNe.md
 sample: https://innv0.com/defiNNe/defiNNe.md
 ---
 
-# defiNNe: The Definition of Definitions
+# defiNNe
 
 ## defiNNe is a meta-definition framework designed to standardize the way technical conventions, protocols, and behavioral rules are documented.
 
 ## Philosophy
 **defiNNe** favors individuals and interactions over processes and tools. It is inspired by [The Agile Manifesto](https://agilemanifesto.org/), [RFC 2119](https://www.ietf.org/rfc/rfc2119.txt) and [Semantic Versioning (SemVer)](https://semver.org/).
-* : .
 
 ## Objectives
 * **Machine Interoperability:** Use YAML to allow definitions to be parsed by CI/CD pipelines, documentation engines, and custom scripts.
