@@ -1,0 +1,72 @@
+---
+import PageLayout from './PageLayout.astro';
+
+interface Props {
+  title?: string;
+  frontmatter: any;
+}
+
+const { title, frontmatter } = Astro.props;
+const displayTitle = title || frontmatter.title || "Documentation";
+---
+
+<PageLayout title={`${displayTitle} - iNNv0`} description={frontmatter.description}>
+  <section class="section-padding bg-white">
+    <div class="container-custom">
+      <div class="grid grid-cols-1 lg:grid-cols-4 gap-12">
+        <!-- Sidebar Metadata -->
+        <aside class="lg:col-span-1">
+          <div class="glass-card p-6 sticky top-24">
+            <h3 class="text-xl font-bold mb-4 gradient-text">Metadata</h3>
+            <div class="space-y-4 text-sm">
+              {frontmatter.version && (
+                <div>
+                  <span class="block text-gray-500 uppercase tracking-wider text-xs font-semibold">Version</span>
+                  <span class="text-gray-900 font-medium">{frontmatter.version}</span>
+                </div>
+              )}
+              {frontmatter.status && (
+                <div>
+                  <span class="block text-gray-500 uppercase tracking-wider text-xs font-semibold">Status</span>
+                  <span class={`inline-block px-2 py-1 rounded text-xs font-bold ${
+                    frontmatter.status === 'Draft' ? 'bg-yellow-100 text-yellow-700' : 
+                    frontmatter.status === 'Completed' ? 'bg-green-100 text-green-700' : 
+                    'bg-blue-100 text-blue-700'
+                  }`}>
+                    {frontmatter.status}
+                  </span>
+                </div>
+              )}
+              {frontmatter.author && (
+                <div>
+                  <span class="block text-gray-500 uppercase tracking-wider text-xs font-semibold">Author</span>
+                  <span class="text-gray-900 font-medium">{frontmatter.author}</span>
+                </div>
+              )}
+              {frontmatter.url && (
+                <div>
+                  <span class="block text-gray-500 uppercase tracking-wider text-xs font-semibold">URL</span>
+                  <a href={frontmatter.url} class="text-primary-600 break-all">{frontmatter.url}</a>
+                </div>
+              )}
+            </div>
+            
+            <div class="mt-8 pt-8 border-t border-gray-100">
+              <a href="/definne" class="text-sm font-semibold text-gray-600 hover:text-primary-600 flex items-center transition-colors">
+                <i class="fas fa-arrow-left mr-2"></i>
+                Back to Specs
+              </a>
+            </div>
+          </div>
+        </aside>
+
+        <!-- Main Content -->
+        <div class="lg:col-span-3">
+          <div class="prose max-w-none">
+            <slot />
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</PageLayout>

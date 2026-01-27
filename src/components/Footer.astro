@@ -1,0 +1,101 @@
+---
+const currentYear = new Date().getFullYear();
+
+const footerLinks = {
+  product: [
+    { name: 'Framework', href: '/framework' },
+    { name: 'Assessment', href: '/assessment' },
+    { name: 'Tools', href: '/framework#tools' },
+  ],
+  company: [
+    { name: 'About', href: '/about' },
+    { name: 'Contact', href: '/contact' },
+    { name: 'Privacy Policy', href: '/privacy-policy' },
+  ],
+  resources: [
+    { name: 'defiNNe Spec', href: '/definne' },
+    { name: 'Documentation', href: '/docs' },
+    { name: 'Blog', href: '/blog' },
+  ],
+};
+---
+
+<footer class="bg-gray-900 text-gray-300 mt-auto">
+  <div class="container-custom py-12 md:py-16">
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 md:gap-12">
+      <!-- Brand -->
+      <div class="lg:col-span-1">
+        <div class="flex items-center space-x-3 mb-4">
+          <div class="h-10 w-auto flex items-center invert opacity-80">
+            <img src="/logo.svg" alt="iNNv0 Logo" class="h-full w-auto" />
+          </div>
+          <span class="text-2xl font-bold text-white tracking-tight">iNNv0</span>
+        </div>
+        <p class="text-gray-400 text-sm leading-relaxed mb-4">
+          Start innovating yesterday. Innovation management framework for early-stage organizations.
+        </p>
+        <div class="flex space-x-4">
+          <a href="#" class="text-gray-400 hover:text-primary-400 transition-colors" aria-label="Twitter">
+            <i class="fab fa-twitter text-xl"></i>
+          </a>
+          <a href="#" class="text-gray-400 hover:text-primary-400 transition-colors" aria-label="LinkedIn">
+            <i class="fab fa-linkedin text-xl"></i>
+          </a>
+          <a href="#" class="text-gray-400 hover:text-primary-400 transition-colors" aria-label="GitHub">
+            <i class="fab fa-github text-xl"></i>
+          </a>
+        </div>
+      </div>
+      
+      <!-- Links -->
+      <div>
+        <h3 class="text-white font-semibold mb-4">Product</h3>
+        <ul class="space-y-2">
+          {footerLinks.product.map(link => (
+            <li>
+              <a href={link.href} class="text-gray-400 hover:text-primary-400 transition-colors text-sm">
+                {link.name}
+              </a>
+            </li>
+          ))}
+        </ul>
+      </div>
+      
+      <div>
+        <h3 class="text-white font-semibold mb-4">Company</h3>
+        <ul class="space-y-2">
+          {footerLinks.company.map(link => (
+            <li>
+              <a href={link.href} class="text-gray-400 hover:text-primary-400 transition-colors text-sm">
+                {link.name}
+              </a>
+            </li>
+          ))}
+        </ul>
+      </div>
+      
+      <div>
+        <h3 class="text-white font-semibold mb-4">Resources</h3>
+        <ul class="space-y-2">
+          {footerLinks.resources.map(link => (
+            <li>
+              <a href={link.href} class="text-gray-400 hover:text-primary-400 transition-colors text-sm">
+                {link.name}
+              </a>
+            </li>
+          ))}
+        </ul>
+      </div>
+    </div>
+    
+    <!-- Bottom Bar -->
+    <div class="border-t border-gray-800 mt-12 pt-8 flex flex-col md:flex-row justify-between items-center">
+      <p class="text-gray-500 text-sm">
+        © {currentYear} iNNv0. All rights reserved.
+      </p>
+      <p class="text-gray-500 text-sm mt-4 md:mt-0">
+        Built with <span class="text-primary-400">♥</span> using Astro
+      </p>
+    </div>
+  </div>
+</footer>

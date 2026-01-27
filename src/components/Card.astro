@@ -1,0 +1,17 @@
+---
+interface Props {
+  title: string;
+  description: string;
+  icon?: string;
+}
+
+const { title, description, icon = "fa-lightbulb" } = Astro.props;
+---
+
+<div class="feature-card scroll-reveal hover-glow">
+  <div class="w-14 h-14 rounded-xl bg-gradient-to-br from-primary-500 to-accent-500 flex items-center justify-center mb-4 shadow-md">
+    <i class={`fas ${icon} text-2xl text-white`}></i>
+  </div>
+  <h3>{title}</h3>
+  <p>{description}</p>
+</div>

@@ -1,0 +1,64 @@
+---
+import PageLayout from '../layouts/PageLayout.astro';
+---
+
+<PageLayout 
+  title="Contact - iNNv0" 
+  description="Get in touch with iNNv0 to start your innovation journey. We're here to help you take the first steps."
+>
+  <section class="section-padding bg-gradient-to-br from-gray-50 to-gray-100 min-h-screen">
+    <div class="container-custom">
+      <div class="max-w-4xl mx-auto">
+        <div class="text-center mb-12 scroll-reveal">
+          <h1 class="text-4xl md:text-5xl font-bold mb-6">
+            Let's Start Your <span class="gradient-text">Innovation Journey</span>
+          </h1>
+          <p class="text-xl text-gray-600">
+            Ready to take the first steps? Fill out the form below and we'll get back to you.
+          </p>
+        </div>
+        
+        <div class="glass-card p-2 md:p-4 overflow-hidden h-[850px] scroll-reveal">
+          <iframe 
+            src="https://docs.google.com/forms/d/e/1FAIpQLSd3iO1V-pyaGNBC_ByddFuMJ1rkUAI2jT78--iqkG-rqXOrTA/viewform?embedded=true"
+            class="w-full h-full rounded-xl"
+            frameborder="0" 
+            marginheight="0" 
+            marginwidth="0"
+          >
+            Loading...
+          </iframe>
+        </div>
+        
+        <div class="mt-16 grid grid-cols-1 md:grid-cols-3 gap-8">
+          <div class="glass-card p-8 text-center scroll-reveal group hover:border-primary-500 transition-all">
+            <div class="w-16 h-16 mx-auto mb-6 rounded-2xl bg-gradient-to-br from-primary-500 to-accent-500 flex items-center justify-center shadow-lg group-hover:scale-110 transition-transform">
+              <i class="fas fa-envelope text-2xl text-white"></i>
+            </div>
+            <h3 class="text-xl font-bold mb-2">Email Us</h3>
+            <p class="text-gray-600 mb-4">Official communication channel</p>
+            <a href="mailto:lucas@lucascervera.com" class="text-primary-600 font-bold hover:underline">lucas@lucascervera.com</a>
+          </div>
+          
+          <div class="glass-card p-8 text-center scroll-reveal group hover:border-secondary-500 transition-all">
+            <div class="w-16 h-16 mx-auto mb-6 rounded-2xl bg-gradient-to-br from-secondary-500 to-secondary-700 flex items-center justify-center shadow-lg group-hover:scale-110 transition-transform">
+              <i class="fas fa-clock text-2xl text-white"></i>
+            </div>
+            <h3 class="text-xl font-bold mb-2">Response Time</h3>
+            <p class="text-gray-600">We typically reply within</p>
+            <span class="text-secondary-600 font-bold">24 business hours</span>
+          </div>
+          
+          <div class="glass-card p-8 text-center scroll-reveal group hover:border-accent-500 transition-all">
+            <div class="w-16 h-16 mx-auto mb-6 rounded-2xl bg-gradient-to-br from-accent-500 to-accent-700 flex items-center justify-center shadow-lg group-hover:scale-110 transition-transform">
+              <i class="fas fa-calendar text-2xl text-white"></i>
+            </div>
+            <h3 class="text-xl font-bold mb-2">Consultation</h3>
+            <p class="text-gray-600">Schedule a free initial</p>
+            <span class="text-accent-600 font-bold text-lg">30-minute strategy call</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</PageLayout>

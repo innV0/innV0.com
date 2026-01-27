@@ -1,0 +1,53 @@
+---
+import { getCollection } from 'astro:content';
+import PageLayout from '../../layouts/PageLayout.astro';
+
+const docsEntries = await getCollection('docs');
+---
+
+<PageLayout 
+  title="Specifications - iNNv0" 
+  description="Technical specifications and conventions defined by iNNv0."
+>
+  <section class="section-padding bg-gradient-to-br from-gray-50 to-gray-100">
+    <div class="container-custom">
+      <div class="text-center mb-16">
+        <h1 class="text-4xl md:text-5xl font-bold mb-6">Technical <span class="gradient-text">Specifications</span></h1>
+        <p class="text-xl text-gray-600 max-w-2xl mx-auto">
+          Standards and protocols for innovation management, documentation frameworks, and metadata structures.
+        </p>
+      </div>
+
+      <div class="card-grid">
+        {docsEntries.map(entry => (
+          <a href={`/definne/${entry.id}`} class="glass-card p-8 group hover:border-primary-500 transition-all">
+            <div class="flex justify-between items-start mb-4">
+              <h2 class="text-2xl font-bold text-gray-900 group-hover:text-primary-600 transition-colors uppercase tracking-tight">
+                {entry.id}
+              </h2>
+              {entry.data.version && (
+                <span class="bg-gray-100 text-gray-500 text-xs font-mono px-2 py-1 rounded">
+                  v{entry.data.version}
+                </span>
+              )}
+            </div>
+            <p class="text-gray-600 mb-6 line-clamp-2">
+              {entry.data.description || "Technical specification for the iNNv0 ecosystem."}
+            </p>
+            <div class="flex items-center text-primary-600 font-semibold text-sm">
+              Read Specification
+              <i class="fas fa-arrow-right ml-2 group-hover:translate-x-1 transition-transform"></i>
+            </div>
+          </a>
+        ))}
+        
+        {docsEntries.length === 0 && (
+          <div class="lg:col-span-3 text-center py-20 bg-white/50 rounded-2xl border-2 border-dashed border-gray-200">
+            <i class="fas fa-box-open text-5xl text-gray-300 mb-4 block"></i>
+            <p class="text-gray-500">No specifications found yet.</p>
+          </div>
+        )}
+      </div>
+    </div>
+  </section>
+</PageLayout>

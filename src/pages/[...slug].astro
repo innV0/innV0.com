@@ -1,0 +1,22 @@
+---
+import { getCollection, render } from 'astro:content';
+import PageLayout from '../layouts/PageLayout.astro';
+
+export async function getStaticPaths() {
+  const pageEntries = await getCollection('pages');
+  return pageEntries.map(entry => ({
+    params: { slug: entry.id }, props: { entry },
+  }));
+}
+
+const { entry } = Astro.props;
+const { Content } = await render(entry);
+---
+
+<PageLayout title={`${entry.data.title || entry.id} - iNNv0`} description={entry.data.description}>
+  <section class="section-padding bg-white">
+    <div class="container-custom prose max-w-4xl mx-auto">
+      <Content />
+    </div>
+  </section>
+</PageLayout>
