@@ -8,7 +8,9 @@ url: https://innv0.com/defiNNe/defiNNe.md
 
 # defiNNe
 
-## defiNNe is a meta-definition framework designed to standardize the documentation of technical conventions, protocols, and behavioral rules
+## Summary
+
+defiNNe is a meta-definition framework designed to standardize the documentation of technical conventions, protocols, and behavioral rules.
 
 ## Philosophy
 
