@@ -40,20 +40,39 @@ Ask the user what they want to model (e.g., 'Coffee', 'History', 'Project Manage
 
 ### Phase 3: Construction
 
-1. **Define Metamodel** (via `class.create` or `node.create` with type):
-   Use kebab-case for class names.
+**CRITICAL**: You MUST create Types BEFORE creating any Items. Follow this exact order:
 
-2. **Create Class Folders**: `/{class-name}/`
+1. **Define Types in Metamodel** (FIRST STEP - MANDATORY):
+   - Use the AI tool to create each Type definition
+   - Types define the structure/schema for Items
+   - Use kebab-case for type names (e.g., `telescopio`, `producto`, `cliente`)
+   - Each Type should have:
+     - Name (kebab-case)
+     - Description
+     - Fields with their data types
+   
+   **Example**: Before creating telescope items, create the "Telescopio" Type with fields like:
+   - `nombre` (text)
+   - `año` (number)
+   - `tipo` (text: refractor/reflector/espacial)
+   - `importancia` (text)
 
-3. **Create Example Instances**: `/{class-name}/{instance-slug}/.iNNfo.md`
+2. **Create Type Folders**: `/{type-name}/`
+   - One folder per Type
+   - Folder name matches the Type name in kebab-case
+
+3. **Create Items** (ONLY AFTER Types are defined):
+   - Create `/{type-name}/{item-slug}/.iNNfo.md` for each Item
+   - Each Item MUST reference an existing Type
+   
    ```yaml
    ---
-   type: instance
-   class: class-name
+   type: item
+   category: {type-name}
    last_updated: "{{timestamp}}"
    ---
    
-   # Instance Name
+   # Item Name
    
    Description here...
    ```
@@ -70,11 +89,13 @@ Show the user:
 
 ## Critical Rules
 
-1. **NEVER** define metamodel in instance files
-2. **ALWAYS** use `type: model_root` in root file
-3. **ALWAYS** use `type: instance` in instance files
-4. **ALWAYS** create `.iNNfo.md` for enrollment
-5. **ALWAYS** put relationships in root `graph_edges`
+1. **ALWAYS** create Types FIRST, then Items
+2. **NEVER** create Items without first defining their Type
+3. **NEVER** define Types in item files (Types go in the metamodel)
+4. **ALWAYS** use `type: item` and `category: {type-name}` in item files
+5. **ALWAYS** create `.iNNfo.md` for enrollment
+6. **ALWAYS** put relationships in root `graph_edges`
+7. **Type names** and **item slugs** MUST be in lowercase kebab-case
 
 ## Example Workflow
 
@@ -83,15 +104,14 @@ Show the user:
 **Model Creator**:
 "Great! For a coffee shop model, I propose:
 
-**Classes:**
-- `Product` (Coffee types, pastries)
-- `Customer` (Regular customers)
-- `Order` (Purchase records)
+**Types** (schema definitions):
+- `producto` (Coffee types, pastries) with fields: name, price, category
+- `cliente` (Regular customers) with fields: name, email, preferences
+- `pedido` (Purchase records) with fields: date, total, status
 
 **Relationships:**
-- `Order` → `Product`: what was ordered (set widget)
-- `Order` → `Customer`: who ordered (set widget)
-- `Product` → `Product`: price (number widget)
+- `pedido` → `producto`: what was ordered (set widget)
+- `pedido` → `cliente`: who ordered (set widget)
 
 Shall I create this structure?"
 
@@ -100,16 +120,26 @@ Shall I create this structure?"
 **Model Creator**:
 "Creating coffee shop model...
 
-1. ✅ Defined classes: `product`, `customer`, `order`
-2. ✅ Created class folders: `product`, `customer`, `order`
-3. ✅ Created example instances:
-   - `product/espresso`
-   - `product/cappuccino`
-   - `customer/john`
-   - `order/order-001`
-4. ✅ Added initial relationships
+**Step 1: Creating Types (schema definitions)**
+1. ✅ Created Type: `producto` with fields (name, price, category)
+2. ✅ Created Type: `cliente` with fields (name, email, preferences)
+3. ✅ Created Type: `pedido` with fields (date, total, status)
 
-Your model is ready! You can now add more instances and relationships."
+**Step 2: Creating folder structure**
+4. ✅ Created type folders: `producto/`, `cliente/`, `pedido/`
+
+**Step 3: Creating example Items (instances)**
+
+5. ✅ Created items:
+   - `producto/espresso` (item of type 'producto')
+   - `producto/cappuccino` (item of type 'producto')
+   - `cliente/john` (item of type 'cliente')
+   - `pedido/pedido-001` (item of type 'pedido')
+
+**Step 4: Relationships**
+6. ✅ Added initial relationships
+
+Your model is ready! You can now add more items and relationships."
 
 ## Reference Model: EcoBalance
 
