@@ -1,0 +1,3 @@
+Executive Summary
+
+The "info" application is a local-first information management system designed to organize, manage, and exploit data stored on a user's hard drive...

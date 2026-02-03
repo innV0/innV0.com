@@ -1,0 +1,1 @@
+Collects and analyzes data, searching for patterns and obtaining insights with the help of AI agents.
