@@ -1,125 +1,190 @@
 ---
-version: 0.2.0
-url: https://innv0.com/definnition/vidgeNN-script-v2
+version: 0.3.0
+url: https://innv0.com/definnition/vidgenn
 author: VidGeNN Team
-status: stable
-sample: https://github.com/innV0/eNNv5/blob/main/apps/VidGeNN/videos/MasterShowroom/script.md
-description: A standard for defining AI-powered video scripts compatible with Logseq outliner syntax.
+status: Draft
+metamodel: https://innv0.com/defiNNition/defiNNition.md
+description: A pure, hierarchical Markdown syntax for video scripts, unifying Video, Sections, Scenes, and Layers into Structured Blocks.
 ---
 
-# VidGeNN Script Specification (v2)
+# VidGeNN Script Specification
 
-## A standard for defining AI-powered video scripts compatible with Logseq outliner syntax
+## Philosophy: "The Clean Syntax"
+This specification abandons legacy constraints (Logseq/YAML) in favor of a pure, hierarchical Markdown structure. It unifies Video, Sections, Scenes, and Layers into a single concept: **Structured Blocks**.
 
-## Philosophy
+## 1. Core Concepts
 
-VidGeNN prioritizes structured content and interoperability. By leveraging the Logseq Markdown format, it treats video scripts as atomic blocks of knowledge, allowing creators to manage their video production pipeline within the same tools they use for research and thought organization.
+### 1.1. Blocks & Tags
+Every element in the script is a **Block**. A block is defined by a Markdown Header followed by a **Type Tag**.
+- The nesting level (Header `#`) determines hierarchy.
+- The tag (`#type`) determines behavior.
 
-## Objectives
+**Standard Block Types:**
+- `#video`: The root block. Contains global configuration.
+- `#section`: A grouping unit. Can be nested. Replaces "Segment".
+- `#scene`: The atomic unit of time/video.
+- `#layer`: A visual or audio component within a scene.
 
-- **Logseq Interoperability**: Scripts MUST be valid Logseq outliner files.
-- **Declarative Composition**: Define visuals, audio, and animations through simple block properties.
-- **Layered Rendering**: Support a three-layer visual model (Background, Layer A, Layer B) for consistent video structure.
-- **Automation Ready**: Enable machine parsing for automated video generation engines.
-
-## Specification
-
-### 1. Document Structure
-
-- The document MUST be a Markdown file (`.md`).
-- It MUST begin with Page Properties (YAML-like syntax without dashes) for global configuration.
-
-### 2. Global Configuration (Page Properties)
-
-- `video-config:: true` MUST be present for the engine to recognize the file as a valid script.
-- `resolution:: [WIDTH]x[HEIGHT]` SHOULD be specified (default: `1280x720`).
-- `fps:: [Number]` MAY be set (default: `30`).
-- `default-voice:: [ID]` MAY be used to set the default TTS voice.
-- `bg-audio:: [PATH]` MAY be used for background music.
-- `bg-volume:: [0.0-1.0]` MAY be used to control music volume (default: `0.2`).
-- `lip-sync-model::` MAY be set to `wav2lip`, `kling`, `sync`, or `s2v` (Speech-to-Video).
-
-### 3. Block Syntax
-
-- Every content block MUST start with `- ` to ensure Logseq compatibility.
-- Properties MUST use the double colon format: `key:: value`.
-- Comments MUST start with `;` on a new line and will be ignored by the engine.
-
-### 4. Templates
-
-- Templates MUST be defined using the `#template` tag: `- #template NAME`.
-- Properties defined within a template SHOULD be applied to any scene referencing that template.
-
-### 5. Scenes and Items
-
-- A scene is defined by a Markdown link: `- [Label](URL/Path)`.
-- The URL/Path in the link parenthesis MUST point to the background media (image or video).
-- **Audio/Speech**:
-  - If a scene includes spoken word, it MUST use `dialogue:: [Text]`.
-  - If `dialogue` is present, the scene duration is determined by the length of the generated audio.
-- **Duration**:
-  - If no `dialogue` is provided, a `duration:: [seconds]` property MAY be specified (default for images: 3s; default for video: clip length).
-- **Visual Effects**: The `effect::` property MAY be used. Supported values:
-  - `ken-burns`: Slow zoom.
-  - `handheld`: Organic camera shake.
-  - `pulse`: Rhythmic zoom.
-  - `dutch`: Subtle rotation.
-  - `parallax`: 2.5D depth simulation.
-  - `parallax-3d`: AI-generated depth map (requires Replicate).
-  - `animate`: Image-to-Video generation (requires Replicate).
-  - `vidgenn-dynamic`: "Beat Gen" effect (subtle zoom + floating pan).
-
-### 6. Layer System
-
-- **Layer A (Actor/Avatar)**:
-  - `layer-a-path::` Path to the media.
-  - `layer-a-chroma::` Color to remove (Chroma Key).
-  - `layer-a-scale::` Size (e.g., `800xauto`).
-  - `layer-a-position::` Position (`center`, `right-bottom`, etc.).
-- **Layer B (Overlay)**:
-  - `layer-b-path::` Path to the overlay.
-  - `layer-b-blend-mode::` Blend mode (`screen`, `overlay`, etc.).
-  - `layer-b-opacity::` Transparency (0.0 to 1.0).
-
-### 7. Post-Production
-
-- `transition::` xfade type (e.g., `fade`, `wipeleft`).
-- `transition-duration::` Duration in seconds.
-- `subtitle-ass::` Override subtitle text for the scene.
-
-## Template
-
-````markdown
-video-config:: true
-resolution:: 1920x1080
-
-- #template CHARACTER_NAME
-  layer-a-path:: ./assets/character.png
-  layer-a-position:: center-bottom
-
-- # Scene Title
-  - [Background Description](file:///path/to/media.mp4)
-    template:: CHARACTER_NAME
-    dialogue:: Hello world!
-````
-
-## Examples
-
-### Complex Scene with All Layers
+### 1.2. Block Anatomy
+A block consists of three parts, in this order:
+1. **Header**: `## Title #tag`
+2. **Properties**: List of `- key: value` pairs.
+3. **Content**: Free text body (Narration, Dialogue, or Text Overlay).
 
 ```markdown
-- [Sci-Fi Lab](lab.mp4)
-  template:: SCIENTIST
-  dialogue:: This laboratory uses advanced AI to process data.
-  layer-b-path:: ./overlays/data_stream.mp4
-  layer-b-blend-mode:: screen
-  effect:: handheld
+### Block Title #type
+- property_a: value
+- property_b: value
+
+This is the content of the block.
 ```
 
-### AI Animated Image
+### 1.3. Properties
+- Syntax: `- key: value` (Standard Markdown List).
+- properties are **scoped**: A property defined in a `#section` is inherited by all `#scene` blocks inside it (unless overridden).
+
+### 1.4. Content
+- The text body of a block serves as its primary data source.
+- For a `#scene`, Content = **Narration/Dialogue**.
+- For a `#layer` (text), Content = **Visible Text**.
+
+---
+
+## 2. Structural Levels
+
+### 2.1. Video (Root)
+Defines the output file and global render settings. Replaces File Frontmatter.
 
 ```markdown
-- [Portrait of an Artist](artist.jpg)
-  effect:: animate
-  dialogue:: The artist comes to life through generative video.
+# Product Launch 2026 #video
+- resolution: 1920x1080
+- fps: 30
+- voice: Sarah_Neural
+```
+
+### 2.2. Sections
+Logical groupings. Used to organize complex scripts and manage context (e.g., change music for Part 2).
+
+```markdown
+## Part 1: Problem Definition #section
+- music: ./assets/sad_piano.mp3
+- voice_speed: 1.1
+```
+
+### 2.3. Scenes
+The distinct moments of the video.
+
+```markdown
+### Intro Scene #scene
+- duration: 5s
+- transition: fade_black
+
+Have you ever felt lost in code? You are not alone.
+```
+
+### 2.4. Layers
+Components composed inside a scene. If no layers are defined, the scene properties (`media`) define the background.
+
+```markdown
+#### Overlay Image #layer
+- media: ./assets/logo.png
+- position: top-right
+- opacity: 0.8
+```
+
+---
+
+## 3. Advanced Features
+
+### 3.1. Templates
+Templates are defined in a special generic section or imported.
+To apply a template, use the `template` property or the **Shortcut Syntax**.
+
+```markdown
+## Standard Slide #template
+- layout: dynamic_grid
+- opacity: 1.0
+- effect: zoom_in
+```
+
+### 3.2. Shortcut Syntax (The "One-Liner")
+For rapid scripting, a generic paragraph starting with a `#TemplateTag` is treated as a `#scene` that inherits from that template.
+
+**Syntax**: `#TemplateName Content text...`
+
+**Example**:
+```markdown
+#Narrator Welcome to the new era of video.
+#Aggressive But wait, there is more!
+```
+*Parses as:*
+- Scene 1: matches template `Narrator`, content = "Welcome to..."
+- Scene 2: matches template `Aggressive`, content = "But wait..."
+
+---
+
+## 4. Property Reference (Standardized)
+
+### Video / Global
+- `resolution`: `1920x1080` (string)
+- `fps`: `30` (number)
+- `format`: `mp4` (string)
+
+### Scene / Common
+- `media`: Path to image/video `asset://...` or `./relative/path`.
+- `duration`: Seconds (number) or `auto` (string).
+- `voice`: Voice ID for TTS.
+- `voice_speed`: Multiplier (0.5 - 2.0).
+- `effect`: Visual animation (`zoom_in`, `pan_left`).
+- `transition`: Exit transition (`crossfade`, `cut`).
+
+### Layer
+- `type`: `image`, `video`, `text`, `audio`.
+- `position`: `center`, `top-right`, `x,y`.
+- `scale`: Size multiplier.
+- `animation`: Layer-specific animation.
+
+---
+
+## 5. Examples
+
+### Full Script Example
+
+```markdown
+# Tech Demo 2026 #video
+- resolution: 1080x1920
+- author: VidGeNN Team
+- music: ./audio/bg_loop.mp3
+
+## Intro #section
+- voice: Adam_V2
+
+### Scene 1: The Hook #scene
+- media: ./stock/server_room.mp4
+- effect: ken_burns
+
+In a world where data rules everything...
+
+### Scene 2: The Solution #scene
+- template: Tech_Highlight
+- media: ./assets/chipset.jpg
+
+We provide the key to unlock it.
+
+#### Text Overlay #layer
+- position: center
+- style: neon_blue
+
+UNLOCK NOW
+```
+
+### Shortcut Example
+
+```markdown
+# My Story #video
+
+#Narrator Once upon a time.
+#Narrator There was a script engine.
+#Angry But it was too complex!
+#Hero Until VidGeNN v3 arrived.
 ```
