@@ -20,7 +20,7 @@ const docsEntries = await getCollection('docs');
 
       <div class="card-grid">
         {docsEntries.map(entry => (
-          <a href={`/definne/${entry.id}`} class="glass-card p-8 group hover:border-primary-500 transition-all">
+          <a href={`/definnition/${entry.id}`} class="glass-card p-8 group hover:border-primary-500 transition-all">
             <div class="flex justify-between items-start mb-4">
               <h2 class="text-2xl font-bold text-gray-900 group-hover:text-primary-600 transition-colors uppercase tracking-tight">
                 {entry.id}

@@ -2,29 +2,30 @@
 version: 0.1.1
 author: Lucas Cervera
 status: Draft
-metamodel: https://innv0.com/defiNNe/defiNNe.md
-url: https://innv0.com/defiNNe/defiNNe.md
+metamodel: https://innv0.com/defiNNition/defiNNition.md
+url: https://innv0.com/defiNNition/defiNNition.md
+description: A meta-definition framework designed to standardize the documentation of technical conventions, protocols, and behavioral rules.
 ---
 
-# defiNNe
+# defiNNition
 
 ## Summary
 
-defiNNe is a meta-definition framework designed to standardize the documentation of technical conventions, protocols, and behavioral rules.
+defiNNition is a meta-definition framework designed to standardize the documentation of technical conventions, protocols, and behavioral rules.
 
 ## Philosophy
 
-defiNNe favors individuals and interactions over processes and tools. It is inspired by The Agile Manifesto, RFC 2119 and Semantic Versioning (SemVer).
+defiNNition favors individuals and interactions over processes and tools. It is inspired by The Agile Manifesto, RFC 2119 and Semantic Versioning (SemVer).
 
 ## Objectives
 
 * Machine Interoperability: Use YAML to allow definitions to be parsed by CI/CD pipelines, documentation engines, and validation scripts.
 * Developer Experience (DX): Prioritize a Source of Truth that is easily editable and searchable within text editors and version control systems.
-* Recursive Integrity: The defiNNe specification MUST use YAML Front Matter to define its own metadata.
+* Recursive Integrity: The defiNNition specification MUST use YAML Front Matter to define its own metadata.
 
 ## Specification
 
-To be considered defiNNe-compliant, a document MUST exist as a single Markdown (.md) file and MUST adhere to the following structural requirements:
+To be considered defiNNition-compliant, a document MUST exist as a single Markdown (.md) file and MUST adhere to the following structural requirements:
 
 ### YAML Front Matter (Metadata)
 
