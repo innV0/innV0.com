@@ -45,18 +45,4 @@ Email: lucas@lucascervera.com. Response: within 24 business hours. Free 30-minut
 
 Lucas Rodriguez Cervera collects personal data (name, email, browser data) for order processing, marketing (with consent), and feedback. Users have rights to access, rectify, erase, and port their data. Contact: lucas@lucascervera.com.
 
----
 
-## Specifications
-
-### defiNNition (v0.1.1)
-
-Meta-definition framework for standardizing technical documentation. Documents MUST have YAML front matter with version and url, H1 title, H2 summary, and sections: Philosophy, Objectives, Specification, Template, Examples.
-
-### iNNfo (v1.1.0)
-
-Hierarchical modeling framework using Markdown files with YAML metamodels. Uses Model/Type/Item node categories. Type nodes define fields and presentation. Items represent data instances.
-
-### VidGeNN (v0.3.0 — Clean Syntax)
-
-Pure hierarchical Markdown syntax for video scripts using #video, #section, #scene, and #layer blocks. Supports property scoping, templates, and shortcut syntax.

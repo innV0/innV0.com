@@ -9,10 +9,4 @@
 - [Contact](https://innv0.com/contact.md): Contact information
 - [Privacy Policy](https://innv0.com/privacy-policy.md): Privacy policy
 
-## Specifications
-
-- [defiNNition](https://innv0.com/defiNNition/defiNNe.md): Meta-definition framework (v0.1.1)
-- [iNNfo](https://innv0.com/defiNNe/iNNfo.defiNNe.md): Hierarchical modeling framework (v1.1.0)
-- [VidGeNN](https://innv0.com/defiNNe/VidGeNN.defiNNe.md): Video script specification (v2.2.0)
-
 # Generator: https://skills.innv0.com/innv0-web-design-guide
