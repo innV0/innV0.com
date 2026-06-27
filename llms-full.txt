@@ -1,0 +1,62 @@
+# iNNv0 — Full Site Content
+
+> Innovation management framework for early-stage organizations.
+> Generator: https://skills.innv0.com/innv0-web-design-guide
+
+---
+
+## Home
+
+iNNv0 — Start Innovating Yesterday. With iNNv0, you'll save time and accelerate your innovation journey. We've meticulously crafted the tools and methodologies that will enable you to take the first steps in implementing an innovation management system much faster.
+
+We focus on identifying and implementing innovation opportunities that deliver high value with minimal resources, ensuring innovation is accessible and practical.
+
+### Framework
+
+**Design:** Maturity Assessment (assessmeNNt), Organization Description (organizatioNN), Innovation Management Planning (plaNN). **Execution:** Program Design (desigNN), Opportunity Management (opportuNNities), Initiative Management (iNNitiatives).
+
+### AI Features
+
+Fast Diagnostics, Data-Driven Opportunities, AI-Assisted Ideation, Process Optimization, Reduced Learning Curve, Cost-Effective Solutions.
+
+---
+
+## Framework
+
+Modular Work Units: Inputs (strategic plans, personas, templates), Tasks (autonomous exercises, guided workshops), Outputs (opportunity maps, scorecards, prototypes).
+
+### Process
+
+1. Self-Diagnostic (AI-Guided) 2. Initial Diagnosis 3. Idea Generation & Evaluation 4. Prototype Conceptualization 5. Validation & Feedback 6. Iteration & Refinement
+
+### Methodologies
+
+24 Steps of Disciplined Entrepreneurship, Lean Startup, Running Lean, Design Thinking.
+
+---
+
+## Contact
+
+Email: lucas@lucascervera.com. Response: within 24 business hours. Free 30-minute strategy call.
+
+---
+
+## Privacy
+
+Lucas Rodriguez Cervera collects personal data (name, email, browser data) for order processing, marketing (with consent), and feedback. Users have rights to access, rectify, erase, and port their data. Contact: lucas@lucascervera.com.
+
+---
+
+## Specifications
+
+### defiNNition (v0.1.1)
+
+Meta-definition framework for standardizing technical documentation. Documents MUST have YAML front matter with version and url, H1 title, H2 summary, and sections: Philosophy, Objectives, Specification, Template, Examples.
+
+### iNNfo (v1.1.0)
+
+Hierarchical modeling framework using Markdown files with YAML metamodels. Uses Model/Type/Item node categories. Type nodes define fields and presentation. Items represent data instances.
+
+### VidGeNN (v0.3.0 — Clean Syntax)
+
+Pure hierarchical Markdown syntax for video scripts using #video, #section, #scene, and #layer blocks. Supports property scoping, templates, and shortcut syntax.

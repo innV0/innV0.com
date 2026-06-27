@@ -1,16 +1,46 @@
----
-import PageLayout from '../layouts/PageLayout.astro';
----
-
-<PageLayout 
-  title="Privacy Policy - iNNv0" 
-  description="Privacy policy and data protection information for iNNv0."
->
-  <section class="section-padding bg-white">
-    <div class="container-custom">
-      <div class="max-w-4xl mx-auto prose">
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Privacy Policy — iNNv0</title>
+  <meta name="description" content="Privacy policy and data protection information for iNNv0.">
+  <meta name="generator" content="https://skills.innv0.com/innv0-web-design-guide">
+  <link rel="canonical" href="https://innv0.com/privacy-policy">
+  <link rel="alternate" type="text/markdown" href="/privacy-policy.md">
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg">
+  <link rel="stylesheet" href="/css/style.css">
+  <script type="application/ld+json">
+  {"@context":"https://schema.org","@type":"WebSite","name":"iNNv0","url":"https://innv0.com","inLanguage":"en","isAccessibleForFree":true}
+  </script>
+</head>
+<body>
+<header class="header">
+  <div class="container">
+    <div class="header-inner">
+      <a href="/" class="logo"><img src="/logo.svg" alt="iNNv0 logo" class="logo-img">iNNv0</a>
+      <nav class="nav" aria-label="Main navigation">
+        <a href="/">Home</a>
+        <a href="/framework">Framework</a>
+        <a href="/definnition">defiNNition</a>
+        <a href="/contact">Contact</a>
+      </nav>
+      <a href="/contact" class="btn btn-primary header-cta">Get Started</a>
+      <button id="mobile-menu-btn" class="mobile-menu-btn" aria-label="Toggle menu">
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 6h16M4 12h16M4 18h16"/></svg>
+      </button>
+    </div>
+    <div id="mobile-menu" class="mobile-menu">
+      <a href="/">Home</a><a href="/framework">Framework</a><a href="/definnition">defiNNition</a><a href="/contact">Contact</a>
+      <a href="/contact" class="btn btn-primary">Get Started</a>
+    </div>
+  </div>
+</header>
+<main>
+  <section class="section">
+    <div class="container">
+      <div class="prose" style="margin: 0 auto;">
         <h1>Privacy Policy</h1>
-        
         <p>This privacy policy explains how Lucas Rodriguez Cervera collects, uses, and protects your personal data when you use our website.</p>
 
         <h2>What Data Do We Collect?</h2>
@@ -28,7 +58,7 @@ import PageLayout from '../layouts/PageLayout.astro';
         <ul>
           <li>Register online or place an order for any of our products or services.</li>
           <li>Voluntarily complete a customer survey, provide feedback via email, or interact with our message boards.</li>
-          <li>Use or view our website via your browser’s cookies.</li>
+          <li>Use or view our website via your browser's cookies.</li>
         </ul>
         <p>We also collect data indirectly from the following sources:</p>
         <ul>
@@ -56,7 +86,7 @@ import PageLayout from '../layouts/PageLayout.astro';
 
         <h2>How Do We Store Your Data?</h2>
         <p>Lucas Rodriguez Cervera securely stores your data using <strong>Google Drive</strong>, which implements encryption and other security measures to protect your information.</p>
-        <p>We will retain your personal data for <strong>as long as necessary</strong> to fulfill the purposes for which it was collected. After that, we will securely delete or anonymize your data. The retention period will vary depending on the type of data:</p>
+        <p>We will retain your personal data for <strong>as long as necessary</strong> to fulfill the purposes for which it was collected. The retention period will vary depending on the type of data:</p>
         <ul>
           <li>Account and transaction data: Retained for the duration of your account plus up to 7 years to comply with legal obligations (e.g., tax records).</li>
           <li>Marketing data: Retained until you opt out of marketing communications.</li>
@@ -80,34 +110,40 @@ import PageLayout from '../layouts/PageLayout.astro';
           <li><strong>The right to object to processing</strong>: You can object to us processing your personal data, under certain conditions.</li>
           <li><strong>The right to data portability</strong>: You can request that we transfer your data to another organization or directly to you.</li>
         </ul>
-
-        <p>To exercise any of these rights, please contact us at:<br />
-        <strong>Email</strong>: lucas@lucascervera.com<br />
-        We will respond within <strong>one month</strong> of receiving your request.</p>
+        <p>To exercise any of these rights, please contact us at <strong>lucas@lucascervera.com</strong>. We will respond within <strong>one month</strong> of receiving your request.</p>
 
         <h2>Cookies and Tracking Technologies</h2>
-        <p>Our website uses cookies to collect information about how you use our site. You can learn more about our cookie use and how to manage your preferences in our Cookie Policy.</p>
+        <p>Our website uses cookies to collect information about how you use our site.</p>
 
         <h2>Data Sharing and Transfers</h2>
-        <p>Your data may be shared with trusted third parties such as payment processors, analytics services, and cloud hosting providers. We ensure that all third parties implement sufficient safeguards to protect your personal data.</p>
-        <p>If your data is transferred outside the European Economic Area (EEA), we will ensure that appropriate safeguards are in place, such as <strong>Standard Contractual Clauses</strong> or similar legal mechanisms to ensure your data is protected.</p>
+        <p>Your data may be shared with trusted third parties such as payment processors, analytics services, and cloud hosting providers. If your data is transferred outside the European Economic Area (EEA), we will ensure that appropriate safeguards are in place.</p>
 
         <h2>How Do We Protect Your Data?</h2>
-        <p>We take data security seriously and implement industry-standard technical and organizational measures to protect your personal data from unauthorized access, alteration, or disclosure. This includes encryption, access control, and secure data storage practices.</p>
+        <p>We take data security seriously and implement industry-standard technical and organizational measures to protect your personal data from unauthorized access, alteration, or disclosure.</p>
 
-        <h2>Children’s Privacy</h2>
-        <p>Our website is not intended for children under the age of 16, and we do not knowingly collect personal data from children. If we become aware that we have inadvertently collected personal data from children, we will take steps to delete the information as soon as possible.</p>
+        <h2>Children's Privacy</h2>
+        <p>Our website is not intended for children under the age of 16, and we do not knowingly collect personal data from children.</p>
 
         <h2>Changes to Our Privacy Policy</h2>
-        <p>Lucas Rodriguez Cervera regularly reviews this privacy policy and places any updates on this web page. You will be notified of any significant changes via email or a prominent notice on our website. This privacy policy was last updated on January 27, 2026.</p>
+        <p>Lucas Rodriguez Cervera regularly reviews this privacy policy. You will be notified of any significant changes via email or a prominent notice on our website. This policy was last updated on January 27, 2026.</p>
 
         <h2>How to Contact Us</h2>
-        <p>If you have any questions about this privacy policy, the data we hold about you, or would like to exercise one of your data protection rights, please contact us at:<br />
-        <strong>Email</strong>: lucas@lucascervera.com</p>
-
-        <h2>How to Contact the Appropriate Authority</h2>
-        <p>If you feel that Lucas Rodriguez Cervera has not addressed your concerns in a satisfactory manner, you may contact the <strong>Information Commissioner’s Office</strong> or your local data protection authority.</p>
+        <p>If you have any questions, please contact us at <strong>lucas@lucascervera.com</strong>.</p>
       </div>
     </div>
   </section>
-</PageLayout>
+</main>
+<footer class="footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand"><a href="/" class="logo"><img src="/logo.svg" alt="iNNv0 logo" class="logo-img">iNNv0</a><p>Start innovating yesterday. Innovation management framework for early-stage organizations.</p></div>
+      <div><h4>Product</h4><ul><li><a href="/framework">Framework</a></li><li><a href="/definnition">defiNNition Spec</a></li></ul></div>
+      <div><h4>Company</h4><ul><li><a href="/contact">Contact</a></li><li><a href="/privacy-policy">Privacy Policy</a></li></ul></div>
+      <div><h4>Resources</h4><ul><li><a href="/definnition">Specifications</a></li><li><a href="/framework">Documentation</a></li></ul></div>
+    </div>
+    <div class="footer-bottom"><span>&copy; 2026 iNNv0. All rights reserved.</span><span>Built with <a href="https://skills.innv0.com/innv0-web-design-guide" target="_blank">iNNv0 Design System</a></span></div>
+  </div>
+</footer>
+<script src="/js/main.js"></script>
+</body>
+</html>

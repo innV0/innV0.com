@@ -1,0 +1,33 @@
+# AI Content Index — https://skills.innv0.com/innv0-web-design-guide
+site:
+  name: "iNNv0"
+  url: "https://innv0.com"
+  description: "Innovation management framework for early-stage organizations."
+  generator: "https://skills.innv0.com/innv0-web-design-guide"
+  language: "en"
+  updated: "2026-06-27"
+pages:
+  - path: "/"
+    title: "iNNv0 — Start Innovating Yesterday"
+    description: "Innovation management framework for early-stage organizations."
+    last_modified: "2026-06-27"
+    format: markdown
+    url: "https://innv0.com/index.md"
+  - path: "/framework"
+    title: "Innovation Framework — iNNv0"
+    description: "Comprehensive early-stage innovation management framework."
+    last_modified: "2026-06-27"
+    format: markdown
+    url: "https://innv0.com/framework.md"
+  - path: "/contact"
+    title: "Contact — iNNv0"
+    description: "Get in touch with iNNv0."
+    last_modified: "2026-06-27"
+    format: markdown
+    url: "https://innv0.com/contact.md"
+  - path: "/privacy-policy"
+    title: "Privacy Policy — iNNv0"
+    description: "Privacy policy and data protection information."
+    last_modified: "2026-06-27"
+    format: markdown
+    url: "https://innv0.com/privacy-policy.md"

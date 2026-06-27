@@ -1,0 +1,219 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>VidGeNN Specification — iNNv0</title>
+  <meta name="description" content="A standard for defining AI-powered video scripts compatible with Logseq outliner syntax.">
+  <meta name="generator" content="https://skills.innv0.com/innv0-web-design-guide">
+  <link rel="canonical" href="https://innv0.com/definnition/vidgenn">
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg">
+  <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+<header class="header">
+  <div class="container">
+    <div class="header-inner">
+      <a href="/" class="logo"><img src="/logo.svg" alt="iNNv0 logo" class="logo-img">iNNv0</a>
+      <nav class="nav" aria-label="Main navigation"><a href="/">Home</a><a href="/framework">Framework</a><a href="/definnition">defiNNition</a><a href="/contact">Contact</a></nav>
+      <button id="mobile-menu-btn" class="mobile-menu-btn" aria-label="Toggle menu"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 6h16M4 12h16M4 18h16"/></svg></button>
+    </div>
+    <div id="mobile-menu" class="mobile-menu"><a href="/">Home</a><a href="/framework">Framework</a><a href="/definnition">defiNNition</a><a href="/contact">Contact</a></div>
+  </div>
+</header>
+<main>
+  <section class="section">
+    <div class="container">
+      <div class="docs-grid">
+        <aside class="docs-sidebar">
+          <h3>Specifications</h3>
+          <ul>
+            <li><a href="/definnition/definnition">defiNNition</a></li>
+            <li><a href="/definnition/innfo">iNNfo</a></li>
+            <li><a href="/definnition/vidgenn">VidGeNN</a></li>
+          </ul>
+          <a href="/definnition" class="back-link">← Back to Specs</a>
+        </aside>
+        <div>
+          <div class="docs-meta">
+            <div class="docs-meta-item"><strong>Version:</strong> 0.3.0</div>
+            <div class="docs-meta-item"><strong>Author:</strong> VidGeNN Team</div>
+            <div class="docs-meta-item"><strong>Status:</strong> Draft</div>
+            <div class="docs-meta-item"><strong>Metamodel:</strong> <a href="https://innv0.com/defiNNition/defiNNition.md">defiNNition</a></div>
+          </div>
+          <div class="prose">
+            <h1>VidGeNN Script Specification</h1>
+
+            <h2>Philosophy: "The Clean Syntax"</h2>
+            <p>This specification abandons legacy constraints (Logseq/YAML) in favor of a pure, hierarchical Markdown structure. It unifies Video, Sections, Scenes, and Layers into a single concept: <strong>Structured Blocks</strong>.</p>
+
+            <h2>1. Core Concepts</h2>
+
+            <h3>1.1. Blocks &amp; Tags</h3>
+            <p>Every element in the script is a <strong>Block</strong>. A block is defined by a Markdown Header followed by a <strong>Type Tag</strong>.</p>
+            <ul>
+              <li>The nesting level (Header <code>#</code>) determines hierarchy.</li>
+              <li>The tag (<code>#type</code>) determines behavior.</li>
+            </ul>
+            <p><strong>Standard Block Types:</strong></p>
+            <ul>
+              <li><code>#video</code>: The root block. Contains global configuration.</li>
+              <li><code>#section</code>: A grouping unit. Can be nested.</li>
+              <li><code>#scene</code>: The atomic unit of time/video.</li>
+              <li><code>#layer</code>: A visual or audio component within a scene.</li>
+            </ul>
+
+            <h3>1.2. Block Anatomy</h3>
+            <p>A block consists of three parts:</p>
+            <ol>
+              <li><strong>Header:</strong> <code>## Title #tag</code></li>
+              <li><strong>Properties:</strong> List of <code>- key: value</code> pairs.</li>
+              <li><strong>Content:</strong> Free text body (Narration, Dialogue, or Text Overlay).</li>
+            </ol>
+            <pre><code>### Block Title #type
+- property_a: value
+- property_b: value
+
+This is the content of the block.</code></pre>
+
+            <h3>1.3. Properties</h3>
+            <ul>
+              <li>Syntax: <code>- key: value</code> (Standard Markdown List).</li>
+              <li>Properties are <strong>scoped</strong>: A property defined in a <code>#section</code> is inherited by all <code>#scene</code> blocks inside it (unless overridden).</li>
+            </ul>
+
+            <h3>1.4. Content</h3>
+            <ul>
+              <li>The text body of a block serves as its primary data source.</li>
+              <li>For a <code>#scene</code>, Content = <strong>Narration/Dialogue</strong>.</li>
+              <li>For a <code>#layer</code> (text), Content = <strong>Visible Text</strong>.</li>
+            </ul>
+
+            <h2>2. Structural Levels</h2>
+
+            <h3>2.1. Video (Root)</h3>
+            <p>Defines the output file and global render settings.</p>
+            <pre><code># Product Launch 2026 #video
+- resolution: 1920x1080
+- fps: 30
+- voice: Sarah_Neural</code></pre>
+
+            <h3>2.2. Sections</h3>
+            <p>Logical groupings to organize complex scripts and manage context.</p>
+            <pre><code>## Part 1: Problem Definition #section
+- music: ./assets/sad_piano.mp3
+- voice_speed: 1.1</code></pre>
+
+            <h3>2.3. Scenes</h3>
+            <p>The distinct moments of the video.</p>
+            <pre><code>### Intro Scene #scene
+- duration: 5s
+- transition: fade_black
+
+Have you ever felt lost in code? You are not alone.</code></pre>
+
+            <h3>2.4. Layers</h3>
+            <p>Components composed inside a scene.</p>
+            <pre><code>#### Overlay Image #layer
+- media: ./assets/logo.png
+- position: top-right
+- opacity: 0.8</code></pre>
+
+            <h2>3. Advanced Features</h2>
+
+            <h3>3.1. Templates</h3>
+            <p>Templates are defined in a special generic section or imported. Use the <code>template</code> property or <strong>Shortcut Syntax</strong>.</p>
+            <pre><code>## Standard Slide #template
+- layout: dynamic_grid
+- opacity: 1.0
+- effect: zoom_in</code></pre>
+
+            <h3>3.2. Shortcut Syntax (The "One-Liner")</h3>
+            <p>A generic paragraph starting with a <code>#TemplateTag</code> is treated as a <code>#scene</code> that inherits from that template.</p>
+            <p><strong>Syntax:</strong> <code>#TemplateName Content text...</code></p>
+            <pre><code>#Narrator Welcome to the new era of video.
+#Aggressive But wait, there is more!</code></pre>
+
+            <h2>4. Property Reference (Standardized)</h2>
+
+            <h3>Video / Global</h3>
+            <ul>
+              <li><code>resolution</code>: <code>1920x1080</code></li>
+              <li><code>fps</code>: <code>30</code></li>
+              <li><code>format</code>: <code>mp4</code></li>
+            </ul>
+
+            <h3>Scene / Common</h3>
+            <ul>
+              <li><code>media</code>: Path to image/video (<code>asset://...</code> or <code>./relative/path</code>)</li>
+              <li><code>duration</code>: Seconds (number) or <code>auto</code></li>
+              <li><code>voice</code>: Voice ID for TTS</li>
+              <li><code>voice_speed</code>: Multiplier (0.5–2.0)</li>
+              <li><code>effect</code>: Visual animation (<code>zoom_in</code>, <code>pan_left</code>)</li>
+              <li><code>transition</code>: Exit transition (<code>crossfade</code>, <code>cut</code>)</li>
+            </ul>
+
+            <h3>Layer</h3>
+            <ul>
+              <li><code>type</code>: <code>image</code>, <code>video</code>, <code>text</code>, <code>audio</code></li>
+              <li><code>position</code>: <code>center</code>, <code>top-right</code>, <code>x,y</code></li>
+              <li><code>scale</code>: Size multiplier</li>
+              <li><code>animation</code>: Layer-specific animation</li>
+            </ul>
+
+            <h2>5. Examples</h2>
+
+            <h3>Full Script Example</h3>
+            <pre><code># Tech Demo 2026 #video
+- resolution: 1080x1920
+- author: VidGeNN Team
+- music: ./audio/bg_loop.mp3
+
+## Intro #section
+- voice: Adam_V2
+
+### Scene 1: The Hook #scene
+- media: ./stock/server_room.mp4
+- effect: ken_burns
+
+In a world where data rules everything…
+
+### Scene 2: The Solution #scene
+- template: Tech_Highlight
+- media: ./assets/chipset.jpg
+
+We provide the key to unlock it.
+
+#### Text Overlay #layer
+- position: center
+- style: neon_blue
+
+UNLOCK NOW</code></pre>
+
+            <h3>Shortcut Example</h3>
+            <pre><code># My Story #video
+
+#Narrator Once upon a time.
+#Narrator There was a script engine.
+#Angry But it was too complex!
+#Hero Until VidGeNN v3 arrived.</code></pre>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+<footer class="footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand"><a href="/" class="logo"><img src="/logo.svg" alt="iNNv0 logo" class="logo-img">iNNv0</a><p>Start innovating yesterday.</p></div>
+      <div><h4>Product</h4><ul><li><a href="/framework">Framework</a></li><li><a href="/definnition">defiNNition Spec</a></li></ul></div>
+      <div><h4>Company</h4><ul><li><a href="/contact">Contact</a></li><li><a href="/privacy-policy">Privacy Policy</a></li></ul></div>
+      <div><h4>Resources</h4><ul><li><a href="/definnition">Specifications</a></li><li><a href="/framework">Documentation</a></li></ul></div>
+    </div>
+    <div class="footer-bottom"><span>&copy; 2026 iNNv0. All rights reserved.</span><span>Built with iNNv0 Design System</span></div>
+  </div>
+</footer>
+<script src="/js/main.js"></script>
+</body>
+</html>

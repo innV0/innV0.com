@@ -1,0 +1,18 @@
+# iNNv0
+
+> Innovation management framework for early-stage organizations. Save time and accelerate your innovation journey with AI-powered tools and proven methodologies.
+
+## Pages
+
+- [Home](https://innv0.com/index.md): iNNv0 homepage — Start Innovating Yesterday
+- [Framework](https://innv0.com/framework.md): Innovation Management Framework
+- [Contact](https://innv0.com/contact.md): Contact information
+- [Privacy Policy](https://innv0.com/privacy-policy.md): Privacy policy
+
+## Specifications
+
+- [defiNNition](https://innv0.com/defiNNition/defiNNe.md): Meta-definition framework (v0.1.1)
+- [iNNfo](https://innv0.com/defiNNe/iNNfo.defiNNe.md): Hierarchical modeling framework (v1.1.0)
+- [VidGeNN](https://innv0.com/defiNNe/VidGeNN.defiNNe.md): Video script specification (v2.2.0)
+
+# Generator: https://skills.innv0.com/innv0-web-design-guide
